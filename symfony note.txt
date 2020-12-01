@@ -33,7 +33,8 @@ git commit -m "truc que j'ai modif"
 git push -u origin develop
 
 	*****recupérér****
-
+git fecth https://github.com/JackyIGNOL/coiffure.git
+git pull origin develop
 
 	***divers***
 git remote add origin git@github.com:JackyIGNOL/*** nom du dossier ****
