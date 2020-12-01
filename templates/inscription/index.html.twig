@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello InscriptionController!
+{% endblock %}
+
+{% block body %}
+	<main class="container">
+		<h1>Formulaire d'Inscription</h1>
+		{{form_start(formulaire)}}
+		{{form_widget(formulaire)}}
+		<button class="btn btn-info">Inscription</button>
+		{{form_end(formulaire)}}
+	</main>
+{% endblock %}
