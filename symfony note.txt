@@ -1,0 +1,163 @@
+composer create-project symfony/website-skeleton my_project_name
+
+/////INSTALLATION dans terminal////
+composer create-project symfony/website-skeleton test
+cd .\test\
+composer require server --dev ^4.4.2
+php bin/console server:run
+
+///////////DEMMARAGE PROJET///////////
+php bin/console make:controller
+
+//////////redemarrer le serverur/////////////////
+cd //* mon projets *///
+composer require server --dev ^4.4.2
+php bin/console server:run
+
+////////////GIT PUSH GIT HUB//////////////
+
+	****Demarrage du git****
+git init
+git add .
+git commit -m "Premier Git" 
+git branch -M main		***change nom master->main
+git remote add origin https://github.com/JackyIGNOL/coiffure.git
+git push -u origin main
+
+git clone https://github.com/JackyIGNOL/coiffure.git
+
+
+	***Changement***
+git add .
+git commit -m "truc que j'ai modif" 
+git push -u origin develop
+
+	*****recupérér****
+
+
+	***divers***
+git remote add origin git@github.com:JackyIGNOL/*** nom du dossier ****
+git push --set-upstream origin main
+git clone git@github.com:JackyIGNOL/siteCoiffure.git
+git branch
+
+////////////GIT BRANCH/////////
+git branch			***aficher les branch
+git branch nouvelBranch 	*** creer une nouvelle branche
+git checkout nouvelBranch	*** changer de branch
+git branch -d nouvelBranch	***supprimer la branch
+
+
+/////////////////GIT NOTE//////////
+git revert HEAD^	***Annuler changement branch public
+git reset		***Annuler changement branch privé
+
+ssh-keygen -t rsa -b 4096 -C "jacky.ignol@gmail.com" ***créer une clé
+/c/Users/jacky/.ssh/id_rsa
+
+git reset notreCommitCible  --hard
+git reset HEAD~
+
+git log 		*** affiche tout les commit
+git reflog		
+
+
+
+
+
+
+
+
+
+
+https://github.com/JackyIGNOL/Coiff2.git
+
+git@github.com:JackyIGNOL/Coiff2.git
+
+
+
+
+
+////////////////BDD////////////////////////////
+
+/////////Crer une BDD////////
+php bin/console doctrine:database:create
+
+/////////Crer une BDD,table////////
+php bin/console make:entity 
+
+/////////Crer une BDD, migrer////////
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+
+/////////Crer fausse BDD////////
+composer require orm-fixtures --dev
+ php bin/console make:fixtures
+
+composer require fzaninotto/faker
+
+
+///////FAIRE UN FORMULAIRE///////////
+php bin/console make:form
+
+////////FAIRE UN USER ET AUTH///////////////
+php bin/console make:user
+L>L>L>L>
+php bin/console make:entity
+
+//faire >env>
+DATABASE_URL="mysql://root:@127.0.0.1:3306///* Nom de la BDD */?serverVersion=5.7"
+# DATABASE_URL="postgresql://db_user:db_password@127.0.0.1:5432/db_name?serverVersion=13&charset=utf8"
+
+php bin/console doctrine:database:create
+php bin/console make:migration
+php bin/console doctrine:migration:migrate
+L>
+
+php bin/console make:form //inscription
+>UserFormType
+>User
+php bin/console make:controller
+>InscriptionController
+
+>config>package>sevices.yaml //copier coller
+Doctrine\Persistence\ObjectManager: '@doctrine.orm.default_entity_manager'
+
+php bin/console make:auth //Connexion
+/* Nom de la BDD */Controller
+>LoginForm
+L>L>
+
+
+
+
+	{{form_row(formulaire.nom,{'label':})}}
+{{ form_widget(form, { 'label':"Nom" atrr : {'class': 'foo'} }) }}
+
+
+
+////////////bootstrap form////////////
+>config>pachage>twig.yaml
+//copier coller ://
+form_themes: ['bootstrap_4_layout.html.twig']
+
+
+
+
+
+
+
+
+
+
+
+photo-1531727991582-cfd25ce79613.jpg
+
+
+
+
+
+
+
+
+
