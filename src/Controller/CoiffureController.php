@@ -97,4 +97,30 @@ class CoiffureController extends AbstractController
         return $this->render('coiffure/Tarifs/Produits.html.twig');
     }
 
+    /**
+     * @Route("/coiffure/barberShop", name="barberShop")
+     */
+
+    public function barberShop()
+    {
+        return $this->render('coiffure/barberShop/barberShop.html.twig');
+    }
+
+    /**
+     * @Route("/coiffure/ReseauxSociaux", name="ReseauxSociaux")
+     */
+
+    public function ReseauxSociaux()
+    {
+        return $this->render('coiffure/ReseauxSociaux/ReseauxSociaux.html.twig');
+    }
+
+    /**
+     * @Route("/coiffure/RendezVous", name="RendezVous")
+     */
+
+    public function RendezVous()
+    {
+        return $this->render('coiffure/RendezVous/RendezVous.html.twig');
+    }
 }

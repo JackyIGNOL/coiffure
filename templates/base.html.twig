@@ -22,79 +22,44 @@
 			<div class="collapse navbar-collapse" id="navbarColor01">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="">Accueil
-						</a>
+						<a class="nav-link" href="{{path('home')}}">Accueil</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Autre</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="">Creation</a>
-							<a class="dropdown-item" href="">Qui sommes nous</a>
-							<a class="dropdown-item" href="">Actualités</a>
+							<a class="dropdown-item" href="{{path('creation')}}">Creation</a>
+							<a class="dropdown-item" href="{{path('quiSommeNous')}}">Qui sommes nous</a>
+							<a class="dropdown-item" href="{{path('actualites')}}">Actualités</a>
 						</li>
-<<<<<<< HEAD
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Autre</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="{{path('creation')}}">Creation</a>
-								<a class="dropdown-item" href="{{path('quiSommeNous')}}">Qui sommes nous</a>
-								<a class="dropdown-item" href="{{path('actualites')}}">Actualités</a>
-							</li>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Books</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="{{path('coupeEnfant')}}">Coupe enfant</a>
-								<a class="dropdown-item" href="{{path('coupeFemme')}}">Coupe femme</a>
-								<a class="dropdown-item" href="{{path('coupeHomme')}}">Coupe homme</a>
-							</li>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Tarifs</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="{{path('tarifsStandars')}}">Tarifs standards</a>
-								<a class="dropdown-item" href="{{path('Produits')}}">Produits</a>
-								<a class="dropdown-item" href=""></a>
-							</li>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="">Barber Shop</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="">?</a>
-=======
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Books</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="">Coupe enfant</a>
-							<a class="dropdown-item" href="">Coupe femme</a>
-							<a class="dropdown-item" href="">Coupe homme</a>
+							<a class="dropdown-item" href="{{path('coupeEnfant')}}">Coupe enfant</a>
+							<a class="dropdown-item" href="{{path('coupeFemme')}}">Coupe femme</a>
+							<a class="dropdown-item" href="{{path('coupeHomme')}}">Coupe homme</a>
 						</li>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Tarifs</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="">Tarifs standards</a>
-							<a class="dropdown-item" href="">Produits</a>
+							<a class="dropdown-item" href="{{path('tarifsStandars')}}">Tarifs standards</a>
+							<a class="dropdown-item" href="{{path('Produits')}}">Produits</a>
 							<a class="dropdown-item" href=""></a>
->>>>>>> 0fd4d29bbbb88be9332ba666bb63802ed7d9a30b
 						</li>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Barber Shop</a>
+						<a class="nav-link" href="{{path('barberShop')}}">Barber Shop</a>
 					</li>
+					
 					<li class="nav-item">
-						<a class="nav-link" href="">?</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="">About</a>
+						<a class="nav-link" href="{{path('ReseauxSociaux')}}">Reseaux sociaux</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{path('inscription')}}">Inscription</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="">Rendez-vous</a>
+						<a class="nav-link" href="{{path('RendezVous')}}">Rendez-vous</a>
 					</li>
 
 					{% if app.user %}
@@ -110,7 +75,7 @@
 			</div>
 		</nav>
 
-		<nav>
+		{# <nav>
 			<div>
 				<li>
 					<a href="#top">HOME</a>
@@ -128,7 +93,7 @@
 			<div>
 				<i class="fas fa-search"></i>
 			</div>
-		</nav>
+		</nav> #}
 
 
 		{% block body %}{% endblock %}
