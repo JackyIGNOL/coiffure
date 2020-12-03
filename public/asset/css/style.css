@@ -1,23 +1,26 @@
 /* 0) Genéral */
 @font-face {
-    font-family: lato;
-    src: url(Lato/Lato-Regular.ttf);
+    font-family: OldBlack;
+    src: url(../fonts/OldSansBlack.ttf);
+}
+@font-face {
+    font-family: KAGE;
+    src: url(../fonts/KAGE-Freebies-Black.otf);
 }
 
 body{
     margin: 0;
     padding: 0;
     /* 'lato', */
-    font-family: lato, fantasy, Courier, monospace  ;  
-    color: grey;
+    font-family: OldBlack, fantasy, Courier, monospace  ;  
+    color: white;
+    background-image: url("../image/fond.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
 }
 
-/* 0.0)Header */
-header{
-    background: url("img/parallax1.jpg") no-repeat center;
-    background-size: cover;
-    height: 373px;
-}
 nav{
     /* position: fixed; */
     padding: 11px 0px;
@@ -26,204 +29,27 @@ nav{
     display: flex;
     justify-content: space-between;
 }
-
-a:-webkit-any-link{
-    font-size: 1rem;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-.bgtransparent{
-    background-color: rgba(255, 255, 255, 0);
-    transition:  background-color 1s ease-in-out;
-}
-.bgwhite{
-    background-color: white;
-    transition:  background-color 1s ease-in-out;
-    box-shadow: 0px 0px 5px black;
-}
-
 li{
     display: inline;
     padding: 0px 15px;
     /* font-size: 20px; */
 
 }
-header div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-h1{
-    color: white;
-    background-color: black;
-    padding: 12px 22px;
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: 9px;
-}
-/* 0.1) Main */
-/* 0.1.0) About me */
-.center{
-    text-align: center;
-}
-.myName{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-.wso{
-    width: 48%;
-    padding: 1%;
-}
-.wso img{
-    width: 100%;
-}
-.p100{
-    background-color: gray;
-    width: 100%;
-}
-.pourcentage{
-    color: white;
-    padding: 5px 0;
-    text-align: center;
-    background-color: black;
-}
-.p1{
-    width: 90%;
-}
-.p2{
-    width: 85%;
-}
-.p3{
-    width: 75%;
-}
-.aboutDM{
-    width: 80%;
-    margin: 0 auto;
-}
-.aboutFin{
-    margin: 20px 0 0 0;
-    width: 100%;
-    height: 100px;
-    background-color: grey;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.aboutFin2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* 0.1.1) portfolio */
-#portfolio{
-    margin: 0;
-    padding: 0;
-}
-.porfoliorHeader{
-    width: 100%;
-    margin: 0;
-    height: 400px;
-    background: url("img/parallax2.jpg") no-repeat center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.porfoliorHeader h2{
-    color: white;
-    font-size: 40px;
-    letter-spacing: 5px;
-}
-.pMain{
-    margin: 50px 0 40px 0;
-}
-.myWork{
-    width: 80%;
-    margin: 0 auto;
-}
-.myWork img{
-    width: 20%;
-}
-#portfolio button{
-    border: none;
-    margin: 20px 0 110px 0;
-    padding: 15px;
-    font-size: 15px;
-}
-/* 0.1.2) contact */
-#contact{
-    margin: 0;
-    padding: 0;
-}
-.contactHeader{
-    width: 100%;
-    margin: 0 0 79px 0;
-    height: 400px;
-    background: url("img/parallax3.jpg") no-repeat center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.contactHeader h2{
-    color: white;
-    font-size: 40px;
-    letter-spacing: 5px;
 
-}
-#contact h3{
-    font-size: 22px;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
-}
-.contactmain{
-    display: flex;
-    justify-content: center;
-}
-.map{
-    width: 270px;
-    height: 150px;
-    margin: 20px;
-}
-.champ{
-    width: 97%;
-    padding: 5px;
-    margin: 1%;
-}
-.champb{
-    width: 47%;
-}
-form{
-    position: relative;
-    padding: 0 0 30px 0;
-}
-#contact button{
-    width: 150px;
-    background-color: black;
+a:-webkit-any-link{
+    font-family: OldBlack, Courier,  fantasy, monospace  ;  
+    font-size: 1rem;
+    text-decoration: none;
     color: white;
-    padding: 5px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    font-weight: bold;
 }
-
-/* 0.2) Footer */
-footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: grey;
-    color: white;
-    height: 300px;
+.jauneC{
+    color: rgb(205, 185, 105);
 }
-.footerButton{
-    padding: 10px;
-    color: grey;
+.kage{
+    font-family: KAGE;
+}
+.corps{
+    margin: auto;
+    width: 80%;
 }
