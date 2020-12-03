@@ -53,3 +53,12 @@ a:-webkit-any-link{
     margin: auto;
     width: 80%;
 }
+.champ{
+    width: 100%;
+    height: 50px;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-color: lightgrey;
+    margin: 10px 0 10px 0;
+}
