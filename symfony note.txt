@@ -30,9 +30,11 @@ git clone https://github.com/JackyIGNOL/coiffure.git
 	***Changement***
 git add .
 git commit -m "truc que j'ai modif" 
+git push -u origin develop
+
 
 git push https://github.com/JackyIGNOL/coiffure.git develop 	//1er push
-git push -u origin develop
+
 
 	*****recupérér****
 git fecth https://github.com/JackyIGNOL/coiffure.git
