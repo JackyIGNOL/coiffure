@@ -1,16 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-	Presentation
+	Calendrier
 
 {% endblock %}
-{# {% block stylesheets %}{% endblock %} #}
 
 {% block body %}
 
 
-	<h1 class="jauneC kage">- Presentation</h1>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus provident quidem dolore illo quasi assumenda optio officia. Odio deleniti voluptates non porro illo accusamus labore eaque vel quo repudiandae!</p>
+	<h1>Calendrier</h1>
 
 	<div>
 		<img src="{{asset('asset/image/LogoProjetG.svg')}}" width="160" height="160" alt="">
@@ -23,22 +21,22 @@
 	</div>
 	{# {% include '../Calendar/calendar.html.twig' %} #}
 
-
-</div>
-<div id="calendar-holder"></div>
-
-{% block stylesheets %}
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
-{% endblock %}
-{% block javascripts %}
-	<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.1.0/main.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.js"></script>
-	<script type="text/javascript">
-		document.addEventListener('DOMContentLoaded', () => {
+	<div>au dessus
+	</div>
+	<div id="calendar-holder"></div>
+	<div>en desous</div>
+	{% block stylesheets %}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
+	{% endblock %}
+	{% block javascripts %}
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.1.0/main.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', () => {
 var calendarEl = document.getElementById('calendar-holder');
 var calendar = new FullCalendar.Calendar(calendarEl, {
 defaultView: 'dayGridMonth',
@@ -66,6 +64,7 @@ timeZone: 'UTC'
 });
 calendar.render();
 });
-	</script>
+		</script>
+	{% endblock %}
+	<h2><br><br><br><br><br></h2>
 {% endblock %}
-<h2><br><br><br><br><br></h2>{% endblock %}
