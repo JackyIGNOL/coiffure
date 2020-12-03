@@ -7,7 +7,16 @@
 	<main class="container">
 		<h1>Formulaire d'Inscription</h1>
 		{{form_start(formulaire)}}
-		{{form_widget(formulaire)}}
+		<div class="champ">
+			{{ form_row(form.nom) }}</div>
+		<div class="champ">
+			{{ form_row(form.prenom) }}</div>
+		<div class="champ">
+			{{ form_row(form.password) }}</div>
+		<div class="champ">
+			{{ form_row(form.email) }}</div>
+
+		{# check box politique du site #}
 		<button class="btn btn-info">Inscription</button>
 		{{form_end(formulaire)}}
 	</main>
