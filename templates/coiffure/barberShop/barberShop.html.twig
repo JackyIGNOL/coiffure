@@ -5,12 +5,103 @@
 {% endblock %}
 
 {% block body %}
-	<h1>
-		Barber Shop</h1>
+	<h1 class="shop">
+		Book of Cut
+	</h1>
 	<div>
 		<iframe width="225" height="400" src="https://www.youtube.com/embed/6a7wrig_GN0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>Luidjy's Barber 
+											client numero 1 :  type : crepus  genre : homme
+											description : coupe de cheveux  Buzz cut + Dégradé à blanc moyen
+		</p>
+
+
 		<iframe width="225" height="400" src="https://www.youtube.com/embed/mq1JiboBri4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>Luidjy's Barber 
+											client numero 2 :  type : semi-crepus et semi-bouclé  genre : femme
+											description : coupe de cheveux courte en dégrader léger
+		</p>
+
+
 		<iframe width="225" height="400" src="https://www.youtube.com/embed/PxWpRbO56ck" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>Luidjy's Barber 
+											client numero 3 :  type : semi-crepus et semi-bouclé  genre : homme
+											description : coupe de cheveux Quiff hérissé + Raie + Dégradé à blanc haut</p>
+
+
 		<iframe width="225" height="400" src="https://www.youtube.com/embed/Qv4n1C3VZyM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<p>Luidjy's Barber 
+											client numero 4 :  type : semi-crepus et semi-bouclé  genre : homme
+											description : coupe de cheveux Petit Afro + Dégradé Burst
+		</p>
+
 	</div>
+
+	<div>
+		<div id="about">
+			<img src="{{asset('asset/image/cut teen.jpg')}}" width="280" height="280" class="bloc" alt="coupe enfant">
+			<div class="bloc textBloc">
+				<h2 class="titre">coupe enfant</h2>
+				<h3 class="sousTitre">Kewann</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi maxime veritatis repudiandae ea
+															                    tempore, earum illo ratione iure est quis, a saepe laborum, officiis maiores voluptatum et eos
+															                    eaque!</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptatum earum animi ab ratione
+															                    doloremque nam voluptas voluptate necessitatibus, dicta odio nobis iste suscipit sint id, hic
+															                    tenetur rerum soluta?</p>
+				<li>
+					<button type="submit">lien vers =><a href="{{path('coupeEnfant')}}">liens</a>
+					</button>
+				</li>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div id="about">
+			<img src="{{asset('asset/image/coupe afro femme.jpg')}}" width="280" height="280" class="bloc" alt="coupe femme">
+			<div class="bloc textBloc">
+				<h2 class="titre">coupe femme</h2>
+				<h3 class="sousTitre">Stonie</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi maxime veritatis repudiandae ea
+															                    tempore, earum illo ratione iure est quis, a saepe laborum, officiis maiores voluptatum et eos
+															                    eaque!</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptatum earum animi ab ratione
+															                    doloremque nam voluptas voluptate necessitatibus, dicta odio nobis iste suscipit sint id, hic
+															                    tenetur rerum soluta?</p>
+				<li>
+					<button type="submit">lien vers =><a href="{{path('coupeFemme')}}">liens</a>
+					</button>
+				</li>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div id="about">
+			<img src="{{asset('asset/image/afro homme.jpg')}}" width="280" height="280" class="bloc" alt="coupe homme">
+			<div class="bloc textBloc">
+				<h2 class="titre">coupe homme</h2>
+				<h3 class="sousTitre">Diego</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi maxime veritatis repudiandae ea
+															                    tempore, earum illo ratione iure est quis, a saepe laborum, officiis maiores voluptatum et eos
+															                    eaque!</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptatum earum animi ab ratione
+															                    doloremque nam voluptas voluptate necessitatibus, dicta odio nobis iste suscipit sint id, hic
+															                    tenetur rerum soluta?</p>
+				<li>
+					<button type="submit">lien vers =><a href="{{path('coupeHomme')}}">liens</a>
+					</button>
+				</li>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
 {% endblock %}
+
+
+ 
