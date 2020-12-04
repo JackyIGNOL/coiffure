@@ -17,7 +17,6 @@ body{
     color: white;
     background-color: black;
     background-image: url("../image/fond.jpg");
-    background-size: ;
     background-attachment: fixed;
     background-repeat: no-repeat;
 
@@ -49,6 +48,10 @@ a:-webkit-any-link{
 }
 .kage{
     font-family: KAGE;
+    font-size: 2.5em;
+}
+.old{
+    font-family: OldBlack, fantasy, Courier, monospace ;
 }
 .corps{
     margin: auto;
@@ -73,11 +76,36 @@ a:-webkit-any-link{
     font-size: 1.5rem;
 
 }
-.bouton1{
+.rdv{
     background-color:   rgba(0, 0, 0, 0);
     border: 2px solid rgb(205, 185, 105);
     color: rgb(205, 185, 105);
     font-size: 1rem;
     padding: 0.5rem;
 
+}
+.service{
+    background-color:   rgb(29, 28, 28);
+    border: none;
+    font-size: 2rem;
+    font-family: OldBlack, fantasy, Courier, monospace ;
+    color: rgb(205, 185, 105) ;
+    width: 250px;
+    height: 400px;
+
+}
+.centre{
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.blocService{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.titreCoiffure{
+    margin-left: 200px;
 }
