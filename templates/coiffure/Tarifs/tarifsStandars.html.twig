@@ -5,17 +5,33 @@
 {% endblock %}
 
 {% block body %}
-	<h1 class="kage jauneC">- Coiffure</h1>
+	<h1 class="kage jauneC titreCoiffure">- Coiffure</h1>
 
-	<div>
+	<div class="blocService ">
+
 		<li>
-			<a href="{{path('coupeHomme')}}">HOMME</a>
+			<a href="{{path('coupeHomme')}}">
+			<div class="service centre">
+			<img src="{{asset('asset/image/IconHomme.svg')}}" width="200" height="200" alt=""> <br>
+				<button class="bouton">HOMME</button>
+			</div>	
+			</a>
 		</li>
 		<li>
-			<a href="{{path('coupeFemme')}}">FEMME</a>
+			<a href="{{path('coupeFemme')}}">
+			<div class="service centre">
+			<img src="{{asset('asset/image/IconFemme.svg')}}" width="200" height="200" alt=""> <br>
+				<button class="bouton">FEMME</button>
+			</div>	
+			</a>
 		</li>
 		<li>
-			<a href="{{path('coupeEnfant')}}">ENFANT</a>
+			<a href="{{path('coupeEnfant')}}">
+			<div class="service centre">
+			<img src="{{asset('asset/image/IconEnfant.svg')}}" width="200" height="200" alt=""> <br>
+				<button class="bouton">ENFANT</button>
+			</div>	
+			</a>
 		</li>
 	</div>
 {% endblock %}
