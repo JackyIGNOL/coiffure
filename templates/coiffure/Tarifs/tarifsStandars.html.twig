@@ -1,8 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Tarifs coiffure!
+{% block title %}
+	Tarifs coiffure!
 {% endblock %}
 
 {% block body %}
-	<h1> Tarifs Standars</h1>
+	<h1 class="kage jauneC">- Coiffure</h1>
+
+	<div>
+		<li>
+			<a href="{{path('coupeHomme')}}">HOMME</a>
+		</li>
+		<li>
+			<a href="{{path('coupeFemme')}}">FEMME</a>
+		</li>
+		<li>
+			<a href="{{path('coupeEnfant')}}">ENFANT</a>
+		</li>
+	</div>
 {% endblock %}

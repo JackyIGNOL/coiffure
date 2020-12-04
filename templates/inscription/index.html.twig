@@ -5,7 +5,7 @@
 
 {% block body %}
 	<main class="container">
-		<h1 class="kage jauneC">Formulaire d'Inscription</h1>
+		<h1 class="kage jauneC">- Formulaire d'Inscription</h1>
 		{{form_start(formulaire)}}
 
 		{{ form_row(formulaire.nom, {"label":" ","attr":{"placeholder":"Votre nom", "class":"champ"}}) }}
@@ -19,7 +19,7 @@
 
 		{{ form_row(formulaire.password, {"label":" ","attr":{"placeholder":"Votre mot de passe", "class":"champ"}}) }}
 	
-		<button class="btn btn-info">Inscription</button>
+		<button class="bouton">Inscription</button>
 		{{form_end(formulaire)}}
 	</main>
 {% endblock %}
