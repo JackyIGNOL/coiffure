@@ -7,18 +7,11 @@
 	<main class="container">
 		<h1 class="kage jauneC">- Formulaire d'Inscription</h1>
 		{{form_start(formulaire)}}
-
 		{{ form_row(formulaire.nom, {"label":" ","attr":{"placeholder":"Votre nom", "class":"champ"}}) }}
-
-
 		{{ form_row(formulaire.prenom, {"label":" ","attr":{"placeholder":"Votre prenom", "class":"champ"}}) }}
-
-
 		{{ form_row(formulaire.email, {"label":" ","attr":{"placeholder":"Votre email", "class":"champ"}}) }}
-		
-
 		{{ form_row(formulaire.password, {"label":" ","attr":{"placeholder":"Votre mot de passe", "class":"champ"}}) }}
-	
+		{{ form_row(formulaire.confirmPassword, {"label":" ","attr":{"placeholder":"Confirmer votre mot de passe", "class":"champ"}}) }}
 		<button class="bouton">Inscription</button>
 		{{form_end(formulaire)}}
 	</main>
