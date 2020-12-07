@@ -44,10 +44,12 @@ a:-webkit-any-link{
 }
 .jauneC{
     color: rgb(205, 185, 105);
+
 }
 .kage{
     font-family: KAGE;
     font-size: 2.5em;
+   
 }
 .old{
     font-family: OldBlack, fantasy, Courier, monospace ;
@@ -68,10 +70,7 @@ a:-webkit-any-link{
     border-bottom-color: rgb(205, 185, 105);
     margin: 10px 0 10px 0;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 1afc8fa1b855e91747f4b3e93850a3d8e24e4987
 footer {
     padding: 10px 20px;
     background: black;
@@ -88,10 +87,7 @@ footer {
     width: 80%;
     
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 1afc8fa1b855e91747f4b3e93850a3d8e24e4987
 .bouton{
     background-color:   rgba(0, 0, 0, 0);
     border: 3px solid rgb(205, 185, 105);
@@ -113,8 +109,9 @@ footer {
     font-size: 2rem;
     font-family: OldBlack, fantasy, Courier, monospace ;
     color: rgb(205, 185, 105) ;
-    width: 250px;
-    height: 400px;
+    width: 150px;
+    height: 300px;
+   
 
 }
 .centre{
@@ -132,7 +129,6 @@ footer {
 .titreCoiffure{
     margin-left: 200px;
 }
-<<<<<<< HEAD
 .scale-with-grid-d{
     display: flex;
     width: 500px;
@@ -151,7 +147,6 @@ footer {
     height: 200%;
     
 }
-=======
 
 footer{
     display: flex;
@@ -169,5 +164,7 @@ footer{
     align-items: center;
     justify-content: center;
 }
+.text{
+    text-align: center;
+}
 
->>>>>>> 1afc8fa1b855e91747f4b3e93850a3d8e24e4987
