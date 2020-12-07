@@ -69,12 +69,7 @@ a:-webkit-any-link{
     margin: 10px 0 10px 0;
 }
 
-footer {
-    padding: 10px 20px;
-    background: black;
-    color: rgb(205, 185, 105);
-    
-  }
+
 .shop{
   text-align: center;
 }
@@ -128,19 +123,41 @@ footer {
 }
 
 footer{
-    display: flex;
-    width: 100%;
+  /*   display: flex;
+    
     height: 30%;
-    background-color:  rgba(0, 0, 0, 0.5);
     margin-top: 15%;
-    color: #fff;
-}
+    color: #fff;*/
+   background-color:  rgba(0, 0, 0, 0);
+   width: 100%; 
+} 
 .blocFooter{
     text-align: center;
-  margin-right: 30px;
-  display: flex;
-    flex-direction: column;
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: center;
+    /* flex-direction: row; */
+    
+}
+.ligne{
+    margin-top: 20%;
+    border-top: 2px solid rgb(205, 185, 105) ;
+    width : 80%;
+    
+    
+}
+.align{
+    display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+  
+    
+}
+.company{
+    padding: 10px 20px;
+    background-color:  rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
