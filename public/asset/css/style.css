@@ -1,4 +1,4 @@
-/* 0) Genéral */
+
 @font-face {
     font-family: OldBlack;
     src: url(../fonts/OldSansBlack.ttf);
@@ -12,7 +12,6 @@ body{
     width: 100%;
     margin: 0;
     padding: 0;
-    /* 'lato', */
     font-family: OldBlack, fantasy, Courier, monospace  ;  
     color: white;
     background-color: black;
@@ -23,7 +22,7 @@ body{
 }
 
 nav{
-    /* position: fixed; */
+
     padding: 3rem;
     width: 80vw;
     display: flex;
@@ -32,7 +31,7 @@ nav{
 li{
     display: inline;
     padding: 0px 15px;
-    /* font-size: 20px; */
+
 
 }
 
@@ -69,6 +68,24 @@ a:-webkit-any-link{
     border-bottom-color: rgb(205, 185, 105);
     margin: 10px 0 10px 0;
 }
+
+footer {
+    padding: 10px 20px;
+    background: black;
+    color: rgb(205, 185, 105);
+    
+  }
+.shop{
+  text-align: center;
+}
+#about{
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+
 .bouton{
     background-color:   rgba(0, 0, 0, 0);
     border: 3px solid rgb(205, 185, 105);
@@ -109,6 +126,7 @@ a:-webkit-any-link{
 .titreCoiffure{
     margin-left: 200px;
 }
+
 footer{
     display: flex;
     width: 100%;
@@ -125,3 +143,4 @@ footer{
     align-items: center;
     justify-content: center;
 }
+
