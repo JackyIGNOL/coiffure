@@ -69,6 +69,12 @@ a:-webkit-any-link{
     margin: 10px 0 10px 0;
 }
 
+footer {
+    padding: 10px 20px;
+    background: black;
+    color: rgb(205, 185, 105);
+    
+  }
 
 .shop{
   text-align: center;
@@ -122,6 +128,26 @@ a:-webkit-any-link{
     margin-left: 200px;
 }
 
+.scale-with-grid-d{
+    display: flex;
+    width: 500px;
+    height: 200%;
+    
+}
+.scale-with-grid-e{
+    display: flex;
+    width: 500px;
+    height: 200%;
+    
+}
+.scale-with-grid-f{
+    display: flex;
+    width: 500px;
+    height: 200%;
+    
+}
+
+
 footer{
   /*   display: flex;
     
@@ -160,4 +186,5 @@ footer{
     background-color:  rgba(0, 0, 0, 0.5);
     color: white;
 }
+
 
