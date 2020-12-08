@@ -10,38 +10,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.1.0/main.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.js"></script>
-
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', () => {
-var calendarEl = document.getElementById('calendar-holder');
-
-var calendar = new FullCalendar.Calendar(calendarEl, {
-defaultView: 'dayGridMonth',
-editable: true,
-eventSources: [
-{
-url: "{{ path('fc_load_events') }}",
-method: "POST",
-extraParams: {
-filters: JSON.stringify({})
-},
-failure: () => { // alert("There was an error while fetching FullCalendar!");
-}
-},
-],
-header: {
-left: 'prev,next today',
-center: 'title',
-right: 'dayGridMonth,timeGridWeek,timeGridDay'
-},
-plugins: [
-'interaction', 'dayGrid', 'timeGrid'
-], // https://fullcalendar.io/docs/plugin-index
-timeZone: 'UTC'
-});
-calendar.render();
-});
-		</script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
@@ -49,39 +17,71 @@ calendar.render();
 		<link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
 	</head>
 	<body>
-		<nav>
-			<div>
-				<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" width="200" height="200" alt="">
-			</div>
-			<div>
-				<li>
-					<a href="{{path('home')}}">ACCUEIL</a>
-				</li>
-				<li>
-					<a href="{{path('tarifsStandars')}}">SERVICES ET TARIFS</a>
-				</li>
-				<li>
-					<a href="{{path('rendezvous')}}">RENDEZ-VOUS</a>
-				</li>
-				<li>
-					<a href="{{path('barberShop')}}">BOOK</a>
-				</li>
-				{% if app.user %}
+		<header>
+			<nav>
+				<div>
+					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" width="200" height="200" alt="">
+				</div>
+				<div>
 					<li>
-						<a href="{{path('app_logout')}}">DECONNEXION</a>
+						<a href="{{path('home')}}">ACCUEIL</a>
 					</li>
-				{% endif %}
-				<li>
-					<a href="{{path('app_login')}}">
-						<button class="rdv">RENDEZ-VOUS</button>
-					</a>
-				</li>
-			</div>
+					<li>
+						<a href="{{path('tarifsStandars')}}">SERVICES ET TARIFS</a>
+					</li>
+					<li>
+						<a href="{{path('barberShop')}}">BOOK</a>
+					</li>
+					{% if app.user %}
 
-		</nav>
-		<div class="corps"> {% block body %}{% endblock %}
+						<li>
+							<a href="{{path('rendezvous')}}">DISPO</a>
+						</li>
+						<li>
+							<a href="{{path('app_logout')}}">DECONNEXION</a>
+						</li>
+					{% endif %}
+					<li>
+						<a href="{{path('app_login')}}">
+							<button class="rdv">RENDEZ-VOUS</button>
+						</a>
+					</li>
+
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="corps">
+				<br>
+				{% block body %}{% endblock %}
+				<br>
 			</div>
-			{% block javascripts %}{% endblock %}
-		</body>
-		<h2><br><br><br><br><br></h2>
-	</html>
+		</main>
+
+		{% block javascripts %}{% endblock %}
+		<footer>
+			<div class="ligne"></div>
+			<div class="blocFooter">
+				<div><img src="{{asset('asset/image/LogoProjetJaune.svg')}}" width="120" height="120" alt=""></div>
+				<div>
+					<p>HORAIRE</p>
+				</div>
+				<div>
+					<p>CONTACT</p><br><img src="{{asset('asset/image/IconTel.svg')}}" width="80" height="80" alt=""><p>+785 23 54 78 96 20</p><br><img src="{{asset('asset/image/IconEmail.svg')}}" width="80" height="80" alt=""><p>luidjycoiffure@gmail.com</p>
+					<div class="align">
+						<img src="{{asset('asset/image/IconTel.svg')}}" width="80" height="80" alt="">
+						<p>+785 23 54 78 96 20</p><br></div>
+					<div class="align">
+						<img src="{{asset('asset/image/IconEmail.svg')}}" width="80" height="80" alt="">
+						<p>luigjycoiffure@gmail.com</p>
+					</div>
+				</div>
+				<div>
+					<p>SUIVEZ-MOI</p><img src="{{asset('asset/image/IconFacebook.svg')}}" width="80" height="80" alt=""><img src="{{asset('asset/image/IconInsta.svg')}}" width="80" height="80" alt=""><img src="{{asset('asset/image/IconYoutube.svg')}}" width="80" height="80" alt=""></div>
+			</div>
+			<div class="align company">
+				<p>Company © Luidjy's Barber. All rights reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>
