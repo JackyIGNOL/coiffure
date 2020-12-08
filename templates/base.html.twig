@@ -6,7 +6,14 @@
 			{% block title %}base
 			{% endblock %}
 		</title>
-
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.1.0/main.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.1.0/main.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
+		<link rel="stylesheet" href="{{asset('asset/css/styleRdv.css')}}">
 		<link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
 	</head>
 	<body>
@@ -26,22 +33,30 @@
 						<a href="{{path('barberShop')}}">BOOK</a>
 					</li>
 					{% if app.user %}
+
+						<li>
+							<a href="{{path('rendezvous')}}">DISPO</a>
+						</li>
 						<li>
 							<a href="{{path('app_logout')}}">DECONNEXION</a>
 						</li>
 					{% endif %}
 					<li>
 						<a href="{{path('app_login')}}">
-
 							<button class="rdv">RENDEZ-VOUS</button>
 						</a>
 					</li>
-				</div>
 
+				</div>
 			</nav>
 		</header>
-		<div class="corps"> {% block body %}{% endblock %}
+		<main>
+			<div class="corps">
+				<br>
+				{% block body %}{% endblock %}
+				<br>
 			</div>
+		</main>
 
 
 			{% block javascripts %}{% endblock %}
@@ -71,9 +86,10 @@
 					<img src="{{asset('asset/image/IconInsta.svg')}}" width="80" height="80" alt="">
 					<img src="{{asset('asset/image/IconYoutube.svg')}}" width="80" height="80" alt="">
 				</div>
-
-
-			</footer>
-		</body>
-	</html>
-</body></html>
+			</div>
+			<div class="align company">
+				<p>Company © Luidjy's Barber. All rights reserved.</p>
+			</div>
+		</footer>
+	</body>
+</html>

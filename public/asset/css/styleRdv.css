@@ -1,0 +1,32 @@
+.jour{
+    border:  rgb(205, 185, 105) 1px solid;
+    width :10rem;
+    text-align: center;
+}
+.semaine{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.jour h3{
+    border:  rgb(205, 185, 105) 5px solid;
+
+}
+.fc-button{
+    background-color:   rgba(0, 0, 0, 0);
+    border: 3px solid rgb(205, 185, 105);
+    color: rgb(205, 185, 105);
+    font-size: 1.5rem;
+} 
+.fc-button-primary:disabled {
+    background-color:   rgba(0, 0, 0, 0);
+    border: 3px solid rgb(205, 185, 105);
+    color: rgb(205, 185, 105);
+    font-size: 1.5rem;
+}
+.fc-button-primary:not(:disabled).fc-button-active, .fc-button-primary:not(:disabled):active {
+    background-color:   rgba(0, 0, 0, 0);
+    border: 3px solid rgb(205, 185, 105);
+    color: rgb(205, 185, 105);
+    font-size: 1.5rem;
+}
