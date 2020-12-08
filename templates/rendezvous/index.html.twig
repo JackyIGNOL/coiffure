@@ -1,8 +1,97 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RendezvousController!
+{% block title %}Mes Rendez-vous
+
 {% endblock %}
 
+{% block stylesheets %}{% endblock %}
+
+{% set trans_day_hash = { 
+        "Monday": "Lundi", 
+        "Tuesday": "Mardi", 
+        "Wednesday": "Mercredi", 
+        "Thursday": "Jeudi", 
+        "Friday": "Vendredi", 
+        "Saturday": "Samedi", 
+        "Sunday": "Dimanche" 
+    } 
+%}
+
 {% block body %}
-	<h1>Mes Rendez-vous</h1>
+	{# <a href="{{ path('booking_new') }}">Ajouter un nouveau rendez-vous</a> #}
+	{#<div id="calendar-holder"></div> #}
+	<br>
+		{% if app.user %}
+			<div class=""> Vous êtes déjà connecté à
+			{{ app.user.username }},
+			<a href="{{ path('app_logout') }}">Deconnectez-vous</a>
+		</div>
+		<h2>Vos rendez vous :
+		</h2>
+		{% for rendezvous in lesrendezvous %}
+			{% if rendezvous.getUser == app.user %}
+				<p>Le
+					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
+					{{rendezvous.heureAt|date("d/m/Y")}}
+					à
+					{{rendezvous.heureAt|date("h")}}
+					heures.
+					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
+						<button class="bouton">
+							<span>
+								Supprimer
+							</span>
+						</button>
+					</a>
+				{% endif %}
+				{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+			</p>
+		{% endfor %}
+		<h2>
+			Rendez-vous Disponibles :
+		</h2>
+		<div class="semaine ">
+			{% set i = 1 %}
+			{% for item in lesjh %}
+				<div class="jour">
+					{% set njour = "now + "~ i ~ "days"%}
+					<h3>
+						{{ trans_day_hash[njour|date('l')] }}
+						{{njour|date("d/m")}}
+					</h3>
+					{% set i = i + 1 %}
+					{% for jh in item %}
+						{% set rdvExistepas = 'true' %}
+						{% for rendezvous in lesrendezvous %}
+							{% if  (jh|date("d-m-Y-h") == rendezvous.heureAt|date("d-m-Y-h")) %}
+								{% set rdvExistepas = 'false' %}
+							{% endif %}
+						{% endfor %}
+						{% if rdvExistepas == 'true' %}
+							<a href="{{path("ajoutrdv2",{'id':app.user.id,'date':jh|date("Y-m-d H")})}} ">
+								<button class="bouton">
+									<span>
+										{{jh|date("H")}}
+										heure
+									</span>
+								</button>
+							</a>
+							<br>
+						{% else %}
+							<button class="bouton">
+								<span>
+									Déjà Pris
+								</span>
+							</button>
+							<br>
+						{% endif %}
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div>
+
+
+	{% endif %}
 {% endblock %}
+
+{% block javascripts %}{% endblock %}

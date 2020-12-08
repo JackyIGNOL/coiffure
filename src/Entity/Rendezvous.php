@@ -21,12 +21,6 @@ class Rendezvous
      * @ORM\Column(type="datetime")
      */
     private $heureAt;
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $occupé;
-
     /**
      * @ORM\ManyToOne(targetEntity=user::class, inversedBy="rendezvouses")
      */
@@ -45,18 +39,6 @@ class Rendezvous
     public function setHeureAt(\DateTimeInterface $heureAt): self
     {
         $this->heureAt = $heureAt;
-
-        return $this;
-    }
-
-    public function getOccupé(): ?bool
-    {
-        return $this->occupé;
-    }
-
-    public function setOccupé(bool $occupé): self
-    {
-        $this->occupé = $occupé;
 
         return $this;
     }
