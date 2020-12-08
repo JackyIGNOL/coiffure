@@ -69,12 +69,8 @@ a:-webkit-any-link{
     margin: 10px 0 10px 0;
 }
 
-footer {
-    padding: 10px 20px;
-    background: black;
-    color: rgb(205, 185, 105);
-    
-  }
+
+
 
 .shop{
   text-align: center;
@@ -149,14 +145,15 @@ footer {
 
 
 footer{
-  /*   display: flex;
-    
-    height: 30%;
-    margin-top: 15%;
-    color: #fff;*/
-   background-color:  rgba(0, 0, 0, 0);
-   width: 100%; 
+    margin-top: 20%;
+    /* width: 80vw; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color:  #ffffff;
+    background-color:  rgba(0, 0, 0, 0.5);
 } 
+
 .blocFooter{
     text-align: center;
     display: flex;
@@ -166,13 +163,7 @@ footer{
     /* flex-direction: row; */
     
 }
-.ligne{
-    margin-top: 20%;
-    border-top: 2px solid rgb(205, 185, 105) ;
-    width : 80%;
-    
-    
-}
+
 .align{
     display: flex;
     align-items: center;
@@ -181,10 +172,19 @@ footer{
   
     
 }
-.company{
-    padding: 10px 20px;
-    background-color:  rgba(0, 0, 0, 0.5);
-    color: white;
+
+.logoFooter{
+    display: inline-block;
+    vertical-align: top;
+    /* width: 40%; */
 }
+.footerCenter{
+    display: inline-block;
+    vertical-align: top;
+	font-size: 13px;
+	text-align: center;
+}
+
+
 
 
