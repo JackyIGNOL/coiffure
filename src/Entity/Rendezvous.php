@@ -22,7 +22,7 @@ class Rendezvous
      */
     private $heureAt;
     /**
-     * @ORM\ManyToOne(targetEntity=user::class, inversedBy="rendezvouses")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="rendezvouses")
      */
     private $user;
 

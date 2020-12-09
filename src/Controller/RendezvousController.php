@@ -47,7 +47,7 @@ class RendezvousController extends AbstractController
             $clone->modify($modif);
             array_push($lesjours2, $clone);
         }
-        $lesjh;
+        /* $lesjh; */
 
         for ($i = 1; $i < 8; $i++) {
             $clone = clone $now;
