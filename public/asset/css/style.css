@@ -96,6 +96,13 @@ footer {
     font-size: 1.5rem;
 
 }
+.boutonreserver{
+    background-color:   rgba(0, 0, 0, 0);
+    border: 3px solid red;
+    color: red;
+    font-size: 1.5rem;
+
+}
 .rdv{
     background-color:   rgba(0, 0, 0, 0);
     border: 2px solid rgb(205, 185, 105);
@@ -130,10 +137,7 @@ footer {
 .titreCoiffure{
     margin-left: 200px;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 7218a1604ce8baaf463dcd1a9806130b5e1cc5f3
 .scale-with-grid-d{
     display: flex;
     width: 500px;
@@ -152,10 +156,6 @@ footer {
     height: 200%;
     
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7218a1604ce8baaf463dcd1a9806130b5e1cc5f3
 
 footer{
   /*   display: flex;
@@ -198,8 +198,3 @@ footer{
 .text{
     text-align: center;
 }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 7218a1604ce8baaf463dcd1a9806130b5e1cc5f3
