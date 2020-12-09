@@ -121,3 +121,530 @@ timeZone: 'UTC'
 calendar.render();
 });
 		</script>
+
+
+		
+	<div>
+		<div id="about">
+			<img src="{{asset('asset/image/cut teen.jpg')}}" width="280" height="280" class="bloc" alt="coupe enfant">
+			<div class="bloc textBloc">
+				<h2 class="titre">coupe enfant</h2>
+				<h3 class="sousTitre">Kewann</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi maxime veritatis repudiandae ea
+																									                    tempore, earum illo ratione iure est quis, a saepe laborum, officiis maiores voluptatum et eos
+																									                    eaque!</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptatum earum animi ab ratione
+																									                    doloremque nam voluptas voluptate necessitatibus, dicta odio nobis iste suscipit sint id, hic
+																									                    tenetur rerum soluta?</p>
+				<li>
+					<button type="submit">lien vers =><a href="{{path('coupeEnfant')}}">liens</a>
+					</button>
+				</li>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div id="about">
+			<img src="{{asset('asset/image/coupe afro femme.jpg')}}" width="280" height="280" class="bloc" alt="coupe femme">
+			<div class="bloc textBloc">
+				<h2 class="titre">coupe femme</h2>
+				<h3 class="sousTitre">Stonie</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi maxime veritatis repudiandae ea
+																									                    tempore, earum illo ratione iure est quis, a saepe laborum, officiis maiores voluptatum et eos
+																									                    eaque!</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptatum earum animi ab ratione
+																									                    doloremque nam voluptas voluptate necessitatibus, dicta odio nobis iste suscipit sint id, hic
+																									                    tenetur rerum soluta?</p>
+				<li>
+					<button type="submit">lien vers =><a href="{{path('coupeFemme')}}">liens</a>
+					</button>
+				</li>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div id="about">
+			<img src="{{asset('asset/image/afro homme.jpg')}}" width="280" height="280" class="bloc" alt="coupe homme">
+			<div class="bloc textBloc">
+				<h2 class="titre">coupe homme</h2>
+				<h3 class="sousTitre">Diego</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quasi maxime veritatis repudiandae ea
+																									                    tempore, earum illo ratione iure est quis, a saepe laborum, officiis maiores voluptatum et eos
+																									                    eaque!</p>
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati voluptatum earum animi ab ratione
+																									                    doloremque nam voluptas voluptate necessitatibus, dicta odio nobis iste suscipit sint id, hic
+																									                    tenetur rerum soluta?</p>
+				<li>
+					<button type="submit">lien vers =><a href="{{path('coupeHomme')}}">liens</a>
+					</button>
+				</li>
+			</div>
+		</div>
+	</div>
+
+
+
+	<h1>Tarifs Standars</h1>
+	<h2>PRESTATION COIFFURE HOMME</h2>
+	<h3 >FORFAIT COIFFURE HOMME</h3>
+	<P>Le principe est simple, des forfaits vous sont proposé avec plusieurs prestations incluses</P>
+						<li>Coupe Élégance</li>
+						<li>€12.00</li>
+					<div class="mprm-ingredients mprm-content-container">
+						<span class="mprm-ingredient">(Coupe classique + contour )</span>
+
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="mprm-simple-view-column ">
+				<div class="mprm-remove-hentry  post-25359 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-hypster mprm-theme-mode mp-menu-item">
+					<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+						<li class="mprm-flex-item mprm-title">Coupe Medium</li>
+						<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+						<li class="mprm-flex-item mprm-price">€15.00</li>
+					</ul>
+
+
+					<div class="mprm-ingredients mprm-content-container">
+						<span class="mprm-ingredient">(Shampoing + Coupe classique ou moderne + Barbe )</span>
+
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="mprm-simple-view-column ">
+				<div class="mprm-remove-hentry  post-25360 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-chic-classe mprm-theme-mode mp-menu-item">
+					<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+						<li class="mprm-flex-item mprm-title">Coupe Chic &amp; Classe</li>
+						<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+						<li class="mprm-flex-item mprm-price">€20.00</li>
+					</ul>
+
+
+					<div class="mprm-ingredients mprm-content-container">
+						<span class="mprm-ingredient">(Shampoing + Coupe classique ou moderne ou freestyle + Barbe + masque purifiant)</span>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="column mcb-column one column_column  column-margin-">
+				<div class="column_attr clearfix align_center animate fadeInLeftLarge" data-anim-type="fadeInLeftLarge" style="">
+					<div style="margin-top:35px;">
+						<img
+						class="scale-with-grid-f" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR48N6u0C9xienkC40c7OusYyssQa4QCG-_Q&usqp=CAU" alt="">
+					{#  modifier la taille de l'image ci-dessus elle ne correcpond pas à la taille des autres images séparant chaque thème #}
+					</div>
+				</div>
+			</div>
+
+
+			<br><br><br>
+
+			<h2 style="font-size:25px; color:#e3282b;">PRESTATION COIFFURE ENFANT</h2>
+			<h3 style="font-size:25px; color:#e3282b;">FORFAIT COIFFURE ENFANT</h3>
+			<div class="mprm-simple-view-column ">
+				<div class="mprm-remove-hentry  post-25361 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-pere-fils mprm-theme-mode mp-menu-item">
+					<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+						<li class="mprm-flex-item mprm-title">Père &amp; Fils</li>
+						<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+						<li class="mprm-flex-item mprm-price">€22.00</li>
+					</ul>
+
+
+					<div class="mprm-ingredients mprm-content-container">
+						<span class="mprm-ingredient">Coupe élégance (pere) + Petit homme</span>
+
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="mprm-simple-view-column ">
+				<div class="mprm-remove-hentry  post-25362 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-jeune-homme mprm-theme-mode mp-menu-item">
+					<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+						<li class="mprm-flex-item mprm-title">Jeune Homme (14 - 19 ans)</li>
+						<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+						<li class="mprm-flex-item mprm-price">€10.00</li>
+					</ul>
+
+
+					<div class="mprm-ingredients mprm-content-container">
+						<span class="mprm-ingredient">Coupe classique ou moderne + Contour</span>
+
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="mprm-simple-view-column ">
+				<div class="mprm-remove-hentry  post-25363 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-petit-homme mprm-theme-mode mp-menu-item">
+					<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+						<li class="mprm-flex-item mprm-title">Petit Homme  (2 - 13 ans)</li>
+						<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+						<li class="mprm-flex-item mprm-price">€8.00</li>
+					</ul>
+
+
+					<div class="mprm-ingredients mprm-content-container">
+						<span class="mprm-ingredient">Coupe classique ou moderne + Contour</span>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div></div><div class="column mcb-column one column_column  column-margin-">
+<div class="column_attr clearfix align_center animate fadeInLeftLarge" data-anim-type="fadeInLeftLarge" style="">
+	<div style="margin-top:35px;">
+		<img class="scale-with-grid-e" src="https://i.pinimg.com/originals/e8/38/f7/e838f7d3471e30d03c9bf17574268e4c.jpg" alt="">
+	</div>
+	{#  modifier la taille de l'image ci-dessus elle ne correcpond pas à la taille des autres images séparant chaque thème #}
+</div></div><div class="column mcb-column one column_column  column-margin-">
+<div class="column_attr clearfix align_center animate fadeInLeftLarge" data-anim-type="fadeInLeftLarge" style="">
+	<div style="margin-top:35px;">
+		<img class="scale-with-grid-e" src="https://i.pinimg.com/originals/e8/38/f7/e838f7d3471e30d03c9bf17574268e4c.jpg" alt="">
+	</div>
+	{#  modifier la taille de l'image ci-dessus elle ne correcpond pas à la taille des autres images séparant chaque thème #}
+</div></div></div></div></div><br><br><br><br><br><br><h2 style="font-size:25px; color:#e3282b;">PRESTATION COIFFURE FEMME</h2><h3 style="font-size:25px; color:#e3282b;">FORFAIT COIFFURE FEMME</h3>{# //mettre la couleur de la typo enfin le jaune doré à la place du rouge #}<P>Le principe est simple, des forfaits vous sont proposé avec plusieurs prestations incluses</P><div class="mprm-container mprm-shortcode-items mprm-view-simple-list"><div class="mprm-columns-count-1 mprm-all-items"><div class="mprm-simple-view-column mprm-category-title"></div><br><br><br><div class="mprm-simple-view-column mprm-first "><div class="mprm-remove-hentry  post-25358 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-elegance mprm-theme-mode mp-menu-item">
+<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+	<li class="mprm-flex-item mprm-title">Femme du jour</li>
+	<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+	<li class="mprm-flex-item mprm-price">€20.00</li>
+</ul>
+<div class="mprm-ingredients mprm-content-container">
+	<span class="mprm-ingredient">(shampoing + brushing )</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h2 style="font-size:25px; color:#e3282b;">PRESTATION COIFFURE FEMME</h2>
+<h3 style="font-size:25px; color:#e3282b;">FORFAIT COIFFURE FEMME</h3>
+{# //mettre la couleur de la typo enfin le jaune doré à la place du rouge #}
+<P>
+	Le principe est simple, des forfaits vous sont proposé avec plusieurs prestations incluses</P>
+<div class="mprm-container mprm-shortcode-items mprm-view-simple-list">
+	<div class="mprm-columns-count-1 mprm-all-items">
+		<div class="mprm-simple-view-column mprm-category-title"></div>
+		<br><br><br>
+		<div class="mprm-simple-view-column mprm-first ">
+			<div class="mprm-remove-hentry  post-25358 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-elegance mprm-theme-mode mp-menu-item">
+				<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+					<li class="mprm-flex-item mprm-title">Femme du jour</li>
+					<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+					<li class="mprm-flex-item mprm-price">€14.00</li>
+				</ul>
+				<div class="mprm-ingredients mprm-content-container">
+					<span class="mprm-ingredient">(shampoing + coupe moderne)</span>
+
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+		<div class="mprm-simple-view-column ">
+			<div class="mprm-remove-hentry  post-25359 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-hypster mprm-theme-mode mp-menu-item">
+				<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+					<li class="mprm-flex-item mprm-title">Femme fatal</li>
+					<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+					<li class="mprm-flex-item mprm-price">€25.00</li>
+				</ul>
+
+
+				<div class="mprm-ingredients mprm-content-container">
+					<span class="mprm-ingredient">(Shampoing + Coupe brushing + coiffage )</span>
+				</div>
+				<br><br><br>
+				<div class="mprm-simple-view-column ">
+					<div class="mprm-remove-hentry  post-25359 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-hypster mprm-theme-mode mp-menu-item">
+						<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+							<li class="mprm-flex-item mprm-title">Femme Hydrater</li>
+							<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+							<li class="mprm-flex-item mprm-price">€18.00</li>
+						</ul>
+
+
+						<div class="mprm-ingredients mprm-content-container">
+							<span class="mprm-ingredient">(Shampoing hydratant + Coupe moderne + masque hydratant)</span>
+
+						</div>
+					</div>
+				</div>
+				<br><br><br>
+				<div class="mprm-simple-view-column ">
+					<div class="mprm-remove-hentry  post-25360 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-chic-classe mprm-theme-mode mp-menu-item">
+						<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+							<li class="mprm-flex-item mprm-title">Femme Chic &amp; Classe</li>
+							<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+							<li class="mprm-flex-item mprm-price">€40.00</li>
+						</ul>
+
+
+						<div class="mprm-ingredients mprm-content-container">
+							<span class="mprm-ingredient">(Shampoing + brushing + Coloration +coiffage)</span>
+						</div>
+						<br><br><br>
+						<div class="mprm-simple-view-column ">
+							<div class="mprm-remove-hentry  post-25360 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-coupe-chic-classe mprm-theme-mode mp-menu-item">
+								<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+									<li class="mprm-flex-item mprm-title">Femme Chic &amp; Classe</li>
+									<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+									<li class="mprm-flex-item mprm-price">€25.00</li>
+								</ul>
+
+
+								<div class="mprm-ingredients mprm-content-container">
+									<span class="mprm-ingredient">(Shampoing + coupe moderne + Coloration +coiffage)</span>
+
+								</div>
+							</div>
+						</div>
+						<br>
+						<br>
+						<br>
+
+
+						<h3 style="font-size:25px; color:#e3282b;">COUPE FEMME</h3>
+						<div class="mprm-simple-view-column ">
+							<div class="mprm-remove-hentry  post-25362 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-jeune-homme mprm-theme-mode mp-menu-item">
+								<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+									<li class="mprm-flex-item mprm-title">Coupe Cheveux court</li>
+									<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+									<li class="mprm-flex-item mprm-price">€12.00</li>
+								</ul>
+
+
+								<div class="mprm-ingredients mprm-content-container">
+									<span class="mprm-ingredient">Coupe classique ou moderne + Contour</span>
+									<div class="mprm-ingredients mprm-content-container">
+										<span class="mprm-ingredient">Coupe classique ou moderne + Contour (sourcils inclus)</span>
+
+									</div>
+								</div>
+							</div>
+							<br><br><br>
+							<div class="mprm-simple-view-column ">
+								<div class="mprm-remove-hentry  post-25363 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-petit-homme mprm-theme-mode mp-menu-item">
+									<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+										<li class="mprm-flex-item mprm-title">Coupe Cheveux mi-long</li>
+										<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+										<li class="mprm-flex-item mprm-price">€18.00</li>
+									</ul>
+
+
+									<div class="mprm-ingredients mprm-content-container">
+										<span class="mprm-ingredient">Coupe classique ou moderne + brushing ou balayage</span>
+									</div>
+									<br><br><br>
+									<div class="mprm-simple-view-column ">
+										<div class="mprm-remove-hentry  post-25362 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-jeune-homme mprm-theme-mode mp-menu-item">
+											<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+												<li class="mprm-flex-item mprm-title">Coupe Cheveux afro</li>
+												<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+												<li class="mprm-flex-item mprm-price">€14.00</li>
+											</ul>
+
+
+											<div class="mprm-ingredients mprm-content-container">
+												<span class="mprm-ingredient">Coupe classique ou moderne ou balayage</span>
+
+											</div>
+										</div>
+									</div>
+
+									<br><br><br>
+									<div class="mprm-simple-view-column ">
+										<div class="mprm-remove-hentry  post-25362 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-jeune-homme mprm-theme-mode mp-menu-item">
+											<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+												<li class="mprm-flex-item mprm-title">Coupe Cheveux long</li>
+												<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+												<li class="mprm-flex-item mprm-price">€22.00</li>
+											</ul>
+
+
+											<div class="mprm-ingredients mprm-content-container">
+												<span class="mprm-ingredient">Coupe classique ou moderne + brushing ou balayage</span>
+												<br><br><br>
+												<div class="mprm-simple-view-column ">
+													<div class="mprm-remove-hentry  post-25363 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-petit-homme mprm-theme-mode mp-menu-item">
+														<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+															<li class="mprm-flex-item mprm-title">Coupe Cheveux court + Wave</li>
+															<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+															<li class="mprm-flex-item mprm-price">€18.00</li>
+														</ul>
+
+
+														<div class="mprm-ingredients mprm-content-container">
+															<span class="mprm-ingredient">Coupe classique ou moderne ou balayage + Wave</span>
+
+														</div>
+													</div>
+												</div>
+												<br><br>
+												<div class="mprm-simple-view-column mprm-first ">
+													<div class="mprm-remove-hentry  post-25365 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-barbier mp_ingredient-barbe-classique mprm-theme-mode mp-menu-item">
+														<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+															<li class="mprm-flex-item mprm-title">Contour Classique</li>
+															<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+															<li class="mprm-flex-item mprm-price">€8.00</li>
+														</ul>
+
+														<div class="mprm-ingredients mprm-content-container">
+															<span class="mprm-ingredient">(contour simple ou freestyle (sourcil inclus))</span>
+
+														</div>
+													</div>
+												</div>
+												<br><br><br>
+												<div class="mprm-simple-view-column ">
+													<div class="mprm-remove-hentry  post-25363 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-petit-homme mprm-theme-mode mp-menu-item">
+														<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+															<li class="mprm-flex-item mprm-title">Coloration</li>
+															<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+															<li class="mprm-flex-item mprm-price">€15.00</li>
+														</ul>
+													</div>
+												</div>
+												<div class="mprm-simple-view-column ">
+													<div class="mprm-remove-hentry  post-25363 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-petit-homme mprm-theme-mode mp-menu-item">
+														<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+															<li class="mprm-flex-item mprm-title">Mèches</li>
+															<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+															<li class="mprm-flex-item mprm-price">à partir de €35.00
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="column mcb-column one column_column  column-margin-">
+													<div class="column_attr clearfix align_center animate fadeInLeftLarge" data-anim-type="fadeInLeftLarge" style="">
+														<div style="margin-top:35px;">
+															<img class="scale-with-grid-d" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqIvSO_HS72TdRHqNPyZamJgCasdz0bWaVrg&usqp=CAU" alt="">
+														</div>
+														{#  modifier la taille de l'image ci-dessus elle ne correcpond pas à la taille des autres images séparant chaque thème #}
+													</div>
+												</div>
+												<div class="mprm-simple-view-column ">
+													<div class="mprm-remove-hentry  post-25363 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-coiffure mp_ingredient-petit-homme mprm-theme-mode mp-menu-item">
+														<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+															<li class="mprm-flex-item mprm-title">Mèches</li>
+															<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+															<li class="mprm-flex-item mprm-price">à partir de €35.00
+																<p>Ce service est éffectuer par une colaboratrice chaque mercredi, ainsi que du vendredi au dimanche soir. Afin de reserver vos places, veuillez consulter le calendrier.</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="column mcb-column one column_column  column-margin-">
+													<div class="column_attr clearfix align_center animate fadeInLeftLarge" data-anim-type="fadeInLeftLarge" style="">
+														<div style="margin-top:35px;">
+															<img class="scale-with-grid-d" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqIvSO_HS72TdRHqNPyZamJgCasdz0bWaVrg&usqp=CAU" alt="">
+														</div>
+														{#  modifier la taille de l'image ci-dessus elle ne correcpond pas à la taille des autres images séparant chaque thème #}
+													</div>
+
+													<br>
+													<br>
+													<br>
+													<br>
+													<br>
+													<br>
+													<div class="section mcb-section   " style="padding-top:0px; padding-bottom:0px; background-color:">
+														<div class="section_wrapper mcb-section-inner">
+															<div class="wrap mcb-wrap one  valign-top clearfix" style="">
+																<div class="mcb-wrap-inner">
+																	<div class="column mcb-column one column_column  column-margin-0px">
+																		<div class="column_attr clearfix align_left" style="">
+																			<h2 style="font-size:25px; color:#e3282b;">PRESTATION BARBIER</h2>
+																			{# //mettre la couleur de la typo enfin le jaune doré à la place du rouge #}
+																			<div class="mprm-container mprm-shortcode-items mprm-view-simple-list">
+																				<div class="mprm-columns-count-1 mprm-all-items">
+																					<div class="mprm-simple-view-column mprm-category-title"></div>
+
+																					<div class="mprm-simple-view-column mprm-first ">
+																						<div class="mprm-remove-hentry  post-25365 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-barbier mp_ingredient-barbe-classique mprm-theme-mode mp-menu-item">
+																							<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+																								<li class="mprm-flex-item mprm-title">Contour Classique</li>
+																								<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+																								<li class="mprm-flex-item mprm-price">€8.00</li>
+																							</ul>
+
+																							<div class="mprm-ingredients mprm-content-container">
+																								<span class="mprm-ingredient">(contour simple ou freestyle (sourcil inclus))</span>
+
+																							</div>
+																						</div>
+																					</div>
+
+																					<div class="mprm-simple-view-column mprm-last ">
+																						<div class="mprm-remove-hentry  post-25366 mp_menu_item type-mp_menu_item status-publish mp_menu_category-prestations-barbier mp_ingredient-barbe-hypster mprm-theme-mode mp-menu-item">
+																							<ul class="mprm-list mprm-flex-container-simple-view mprm-points">
+																								<li class="mprm-flex-item mprm-title">Barber Hypster</li>
+																								<li class="mprm-flex-item mprm-dots">..................................................................................</li>
+																								<li class="mprm-flex-item mprm-price">€12.00</li>
+																							</ul>
+
+																							<div class="mprm-ingredients mprm-content-container">
+																								<span class="mprm-ingredient">(contour + Barbe taillée (sourcil inclus))</span>
+
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="column mcb-column one column_column  column-margin-">
+																		<div class="column_attr clearfix align_center animate fadeInRightLarge" data-anim-type="fadeInRightLarge" style="">
+																			<div style="margin-top:35px;">
+																				<img class="scale-with-grid" src="https://visionbarberclub.fr/wp-content/uploads/2019/05/prestation-barbier-min.jpg" alt="">
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<br>
+													<br>
+													<br>
+													<br>
+													<br>
+													<br>
+
+													<div class="blocService ">
+
+														<li>
+															<a href="{{path('coupeHomme')}}">
+																<div class="service centre">
+																	<img src="{{asset('asset/image/IconHomme.svg')}}" width="200" height="200" alt="">
+																	<br>
+																	<button class="bouton">HOMME</button>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="{{path('coupeFemme')}}">
+																<div class="service centre">
+																	<img src="{{asset('asset/image/IconFemme.svg')}}" width="200" height="200" alt="">
+																	<br>
+																	<button class="bouton">FEMME</button>
+																</div>
+															</a>
+														</li>
+														<li>
+															<a href="{{path('coupeEnfant')}}">
+																<div class="service centre">
+																	<img src="{{asset('asset/image/IconEnfant.svg')}}" width="200" height="200" alt="">
+																	<br>
+																	<button class="bouton">ENFANT</button>
+																</div>
+															</a>
+														</li>
+													</div>

@@ -30,22 +30,23 @@
 		</h2>
 		{% for rendezvous in lesrendezvous %}
 			{% if rendezvous.getUser == app.user %}
-				<p>Le
+				<p>
+					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
+						<button class="bouton">
+							<span>
+								Supprimer ce rendez-vous >
+							</span>
+						</button>
+					</a>
+					Le
 					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
 					{{rendezvous.heureAt|date("d/m/Y")}}
 					à
 					{{rendezvous.heureAt|date("h")}}
 					heures.
-					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
-						<button class="bouton">
-							<span>
-								Supprimer
-							</span>
-						</button>
-					</a>
-				{% endif %}
-				{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
-			</p>
+					{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+				</p>
+			{% endif %}
 		{% endfor %}
 		<h2>
 			Rendez-vous Disponibles :
@@ -78,7 +79,7 @@
 							</a>
 							<br>
 						{% else %}
-							<button class="bouton">
+							<button class="boutonreserver">
 								<span>
 									Déjà Pris
 								</span>
