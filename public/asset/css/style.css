@@ -75,7 +75,6 @@ a:-webkit-any-link{
     border-bottom-color: rgb(205, 185, 105);
     margin: 10px 0 10px 0;
 }
-
 .shop{
   text-align: center;
 }
@@ -84,9 +83,7 @@ a:-webkit-any-link{
     display: flex;
     justify-content: space-between;
     width: 80%;
-    
 }
-
 .bouton{
     background-color:   rgba(0, 0, 0, 0);
     border: 3px solid rgb(205, 185, 105);
