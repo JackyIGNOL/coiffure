@@ -10,9 +10,16 @@
 /* General */
 h1,h2,h3{
     letter-spacing: 0.1rem;
+
 }
-
-
+h1{
+    color: rgb(205, 185, 105);
+    font-family: KAGE;
+    font-size: 2.5em;
+}
+h2{
+    margin: 0;
+}
 body{
     width: 100%;
     margin: 0;
@@ -26,9 +33,7 @@ body{
     background-size: cover;
 
 }
-
 nav{
-
     padding: 3rem;
     width: 80vw;
     display: flex;
@@ -37,10 +42,7 @@ nav{
 li{
     display: inline;
     padding: 0px 15px;
-
-
 }
-
 a:-webkit-any-link{
     font-family: OldBlack, Courier,  fantasy, monospace  ;  
     font-size: 1rem;
@@ -76,7 +78,6 @@ a:-webkit-any-link{
     border-bottom-color: rgb(205, 185, 105);
     margin: 10px 0 10px 0;
 }
-
 .shop{
   text-align: center;
 }
@@ -85,9 +86,7 @@ a:-webkit-any-link{
     display: flex;
     justify-content: space-between;
     width: 80%;
-    
 }
-
 .bouton{
     background-color:   rgba(0, 0, 0, 0);
     border: 3px solid rgb(205, 185, 105);
@@ -196,6 +195,7 @@ a:-webkit-any-link{
     display: flex;
     justify-content: space-between;
     /* font-size: 40px; */
+    position: relative;
 }
 h3 {
     display: block;
@@ -208,13 +208,17 @@ h3 {
     margin: 0;
 }
 .prix {
-    background-color: rgb(97, 97, 97);
+    background-color: rgb(205, 185, 105);
     border-radius: 5px;
     padding: 0.5rem 0.5rem;
     color: rgb(255, 255, 255);
     font-weight: 500;
     display: flex;
     align-items: center;
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    top : -4rem;
 }
 .description {
     color: grey;
@@ -230,9 +234,7 @@ h3 {
 }
 
 
-.test{
-    display: inline;
-}
+
 
 
 /* Footer */

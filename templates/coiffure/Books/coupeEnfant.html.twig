@@ -5,9 +5,8 @@
 {% endblock %}
 
 {% block body %}
-	<h1 class="kage jauneC titreCoiffure">- Coupe Enfant</h1>
-	<br><br>
-
+	<h1 class="kage jauneC">- Coupe Enfant</h1>
+	<br>
 	<h2>Style: Buzz cut</h2>
 	<div class="coupe">
 		<div class="coupeDNP">
@@ -34,40 +33,67 @@
 			</div>
 			<p>Un buzz cut tout ce qui a de plus classique avec un dégradé Burst au dessus des oreiles.</p>
 		</div>
-	</div><br><br><br>
-	<h2>Style: Waves</h2>
-	<div>
-		<img src="{{asset('asset/image/Enfant4.jpg')}}" alt="Waves + Raie">
-		<h3>4. Waves + Raie</h3>
-		<div class="prix">10 €</div>
-		<p>Une coiffure avec un wave + un degradé leger. La raie permet de mettre encore plus en valeur les waves.</p>
-
-		<img src="{{asset('asset/image/Enfant5.jpg')}}" alt="Buzz cut + Contours">
-		<h3>5. Buzz cut + Contours</h3>
-		<div class="prix">10 €</div>
-		<p>Une coupe buzz cut + waves complétée par de très bons contours.</p>
-	</div><br><br><br>
-
-	<h2>Style: Afro et cheveux mi-long ou long</h2>
-	<div>
-		<img src="{{asset('asset/image/Enfant6.jpg')}}" alt="FauxHawkCurly + Design">
-		<h3>6. FauxHawkCurly + Design</h3>
-		<div class="prix">10 €</div>
-		<p>Un fauxhawk sur cheveux curly avec une raie qui forme un joli design et un dégradé à blanc.</p>
-
-		<img src="{{asset('asset/image/Enfant7.jpg')}}" alt="Mohawk + Raies">
-		<h3>7. Mohawk + Raies</h3>
-		<div class="prix">10 €</div>
-		<p>Un très beau Mohawk réalisé sur des cheveux bouclés, sur les cotés nous avons un dégradé à blanc sublimé par 2 raies.</p>
-
-		<img src="{{asset('asset/image/Enfant8.jpg')}}" alt="Afro Courte + Contours">
-		<h3>8. Afro Courte + Contours</h3>
-		<div class="prix">10 €</div>
-		<p>Cette afro courte associée à des contours proches de la perfection.</p>
-
-		<img src="{{asset('asset/image/Enfant9.jpg')}}" alt="Top Knot x Cheveux Curly + Dégradé Hi-lo">
-		<h3>9. Top Knot x Cheveux Curly + Dégradé Hi-lo</h3>
-		<div class="prix">10 €</div>
-		<p>Un Top Knot sur des cheveux bouclés avec un dégradé Hi-lo.</p>
 	</div>
-{% endblock %}
+	<h2>Style: Waves</h2>
+	<div class="coupe">
+		<div class="coupeDNP">
+			<img src="{{asset('asset/image/Enfant4.jpg')}}" alt="Waves + Raie">
+			<div class="coupeNP">
+				<h3>4. Waves + Raie</h3>
+				<div class="prix">10 €</div>
+			</div>
+			<p>Une coiffure avec un wave + un degradé leger. La raie permet de mettre encore plus en valeur les waves.</p>
+		</div>
+		<div>
+
+			<div class="coupeDNP">
+				<img src="{{asset('asset/image/Enfant5.jpg')}}" alt="Buzz cut + Contours">
+				<div class="coupeNP">
+					<h3>5. Buzz cut + Contours</h3>
+					<div class="prix">10 €</div>
+				</div>
+				<p>Une coupe buzz cut + waves complétée par de très bons contours.</p>
+			</div>
+		</div>
+		<br>
+
+		<h2>Style: Afro et cheveux mi-long ou long</h2>
+		<div class="coupe">
+			<div class="coupeDNP">
+				<img src="{{asset('asset/image/Enfant9.jpg')}}" alt="Top Knot x Cheveux Curly + Dégradé Hi-lo">
+				<div class="coupeNP">
+					<h3>9. Top Knot x Cheveux Curly + Dégradé Hi-lo</h3>
+					<div class="prix">10 €</div>
+				</div>
+				<p>Un Top Knot sur des cheveux bouclés avec un dégradé Hi-lo.</p>
+			</div>
+
+			<div class="coupeDNP">
+				<img src="{{asset('asset/image/Enfant7.jpg')}}" alt="Mohawk + Raies">
+				<div class="coupeNP">
+					<h3>7. Mohawk + Raies</h3>
+					<div class="prix">10 €</div>
+				</div>
+				<p>Un très beau Mohawk réalisé sur des cheveux bouclés, sur les cotés nous avons un dégradé à blanc sublimé par 2 raies.</p>
+			</div>
+
+			<div class="coupeDNP">
+				<img src="{{asset('asset/image/Enfant8.jpg')}}" alt="Afro Courte + Contours">
+				<div class="coupeNP">
+					<h3>8. Afro Courte + Contours</h3>
+					<div class="prix">10 €</div>
+				</div>
+				<p>Cette afro courte associée à des contours proches de la perfection.</p>
+			</div>
+
+			<div class="coupeDNP">
+				<img src="{{asset('asset/image/Enfant6.jpg')}}" alt="FauxHawkCurly + Design">
+				<div class="coupeNP">
+					<h3>6. FauxHawkCurly + Design</h3>
+					<div class="prix">10 €</div>
+				</div>
+				<p>Un fauxhawk sur cheveux curly avec une raie qui forme un joli design et un dégradé à blanc.</p>
+			</div>
+		</div>
+
+	{% endblock %}

@@ -1,7 +1,8 @@
 .jour{
     border:  rgb(205, 185, 105) 1px solid;
-    width :10rem;
+    width :250px;
     text-align: center;
+    margin: 0.5rem 5px;
 }
 .semaine{
     display: flex;
@@ -9,7 +10,13 @@
     justify-content: space-around;
 }
 .jour h3{
-    border:  rgb(205, 185, 105) 5px solid;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    border-bottom: rgb(205, 185, 105) 5px solid;
+}
+.heur{
+    width: 80%;
+    margin: 0.5rem 0;
 }
 .fc-button{
     background-color:   rgba(0, 0, 0, 0);
