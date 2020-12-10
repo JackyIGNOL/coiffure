@@ -1,6 +1,6 @@
 .jour{
     border:  rgb(205, 185, 105) 1px solid;
-    width :250px;
+    width : 100%;
     text-align: center;
     margin: 0.5rem 5px;
 }
@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    border: red 1px solid;
 }
 .jour h3{
     font-size: 1.8rem;
@@ -35,4 +36,9 @@
     border: 3px solid rgb(205, 185, 105);
     color: rgb(205, 185, 105);
     font-size: 1.5rem;
+}
+@media screen and (min-width:576px){
+    .jour{
+        width :250px;
+    }
 }

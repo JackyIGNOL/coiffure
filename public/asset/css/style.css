@@ -151,16 +151,12 @@ a:-webkit-any-link{
     height: 200%;
     
 }
-
-
 .align{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-
-
 .text{
     text-align: center;
 }
@@ -259,5 +255,23 @@ footer{
     align-items: flex-start;
     justify-content: center;
     /* flex-direction: row; */
-    
+}
+.presentation {
+    display: flex;
+    flex-direction: column;
+}
+.presentationT{
+    display: block;
+    min-width: 300px;
+    box-sizing: border-box;
+    padding: 1rem;
+    border: red 1px solid; 
+}
+.presentationT p{
+    width: 100%;
+}
+@media screen and (min-width:974px){
+    .presentation {
+        flex-direction: row;
+    }
 }
