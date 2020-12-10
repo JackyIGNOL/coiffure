@@ -28,8 +28,10 @@ body{
     color: white;
     background-color: black;
     background-image: url("../image/fond.jpg");
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
+    background-size: cover;
+
 }
 nav{
     padding: 3rem;
@@ -171,54 +173,17 @@ a:-webkit-any-link{
     width: 225px;
 }
 
-/* COUPE ENFANT */
-.coupe{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.conditionsG{
+    letter-spacing: 0.1rem;
+    display: inline;
 }
-.coupeDNP {
-    /* border: solid 1px rgb(241, 241, 241); */
-    /* padding: 0 20px; */
-    width: 400px;
+.form-check, #user_form_agreeTerms, .form-check-label, .form-group:last-of-type{
+    display: inline;
 }
-.coupeDNP img{
-    width: 100%;
-}
-.coupeNP {
-    display: flex;
-    justify-content: space-between;
-    /* font-size: 40px; */
-    position: relative;
-}
-h3 {
-    display: block;
-    /* font-size: 1.17em; */
-    /* margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px; */
-    font-weight: bold;
-    margin: 0;
-}
-.prix {
-    background-color: rgb(205, 185, 105);
-    border-radius: 5px;
-    padding: 0.5rem 0.5rem;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    position: absolute;
-    right: 0;
-    top : -4rem;
-}
-.description {
-    color: grey;
-    /* font-size: 40px; */
-    font-weight: 500;
-}
+
+
+
+
 
 /* Footer */
 .footerCenter{
@@ -227,14 +192,13 @@ h3 {
 	text-align: center;
 }
 
-.logoFooter{
-    /* display: inline-block;
+ /*.logoFooter{
+    display: inline-block;
     vertical-align: top; */
-    /* width: 40%; */
-}
+    /* width: 40%; 
+}*/
 
 footer{
-    margin-top: 20%;
     /* width: 80vw; */
     
     width: 100%;
@@ -274,4 +238,7 @@ footer{
     .presentation {
         flex-direction: row;
     }
+}
+.company{
+    background-color: black
 }
