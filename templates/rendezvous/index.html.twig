@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Mes Rendez-vous
-
 {% endblock %}
 
 {% block stylesheets %}{% endblock %}
@@ -28,28 +27,48 @@
 				<button class="bouton">Deconnectez-vous</button>
 			</a>
 		</div>
-		<h2>Vos rendez vous :
-		</h2>
+		<h2>Vos rendez vous :</h2>
+		<h3>Vos rendez-vous futur :</h3>
 		{% for rendezvous in lesrendezvous %}
 			{% if rendezvous.getUser == app.user %}
-				<p>
-					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
-						<button class="bouton">
-							<span>
-								Supprimer ce rendez-vous >
-							</span>
-						</button>
-					</a>
-					Le
-					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
-					{{rendezvous.heureAt|date("d/m/Y")}}
-					à
-					{{rendezvous.heureAt|date("h")}}
-					heures.
-					{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
-				</p>
+				{% if rendezvous.heureAt|date("Ymd") > "now"|date("Ymd") %}
+					<p>
+						<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
+							<button class="bouton">
+								<span>
+									Supprimer ce rendez-vous >
+								</span>
+							</button>
+						</a>
+						Le
+						{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
+						{{rendezvous.heureAt|date("d/m/Y")}}
+						à
+						{{rendezvous.heureAt|date("h")}}
+						heures.
+						{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+					</p>
+				{% endif %}
 			{% endif %}
 		{% endfor %}
+		<h3>Vos rendez-vous passé :</h3>
+		{% for rendezvous in lesrendezvous %}
+			{% if rendezvous.getUser == app.user %}
+				{% if rendezvous.heureAt|date("Ymd") <= "now"|date("Ymd") %}
+					<p>
+						Le
+						{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
+						{{rendezvous.heureAt|date("d/m/Y")}}
+						à
+						{{rendezvous.heureAt|date("h")}}
+						heures.
+						{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+					</p>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+
+
 		<h2>
 			Rendez-vous Disponibles :
 		</h2>
@@ -72,16 +91,14 @@
 						{% endfor %}
 						{% if rdvExistepas == 'true' %}
 							<a href="{{path("ajoutrdv2",{'id':app.user.id,'date':jh|date("Y-m-d H")})}} ">
-								<button class="bouton">
-									<span>
-										{{jh|date("H")}}
-										heure
-									</span>
+								<button class="bouton heur">
+									{{jh|date("H")}}
+									heure
 								</button>
 							</a>
 							<br>
 						{% else %}
-							<button class="boutonreserver">
+							<button class="boutonreserver heur">
 								<span>
 									Déjà Pris
 								</span>
