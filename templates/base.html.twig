@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>
-			{% block title %}base
+			{% block title %}
+			base
 			{% endblock %}
 		</title>
 		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
@@ -15,6 +16,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
 		<link rel="stylesheet" href="{{asset('asset/css/styleRdv.css')}}">
 		<link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
+		
 	</head>
 	<body>
 		<header>
@@ -72,11 +74,12 @@
 						<img src="{{asset('asset/image/IconEmail.svg')}}" width="80" height="80" alt="">
 						<p>luigjycoiffure@gmail.com</p>
 					</div>
+
+
 				</div>
 				<div class="centre">
 					<p>SUIVEZ-MOI</p>
 					<div>
-
 						<img src="{{asset('asset/image/IconFacebook.svg')}}" width="80" height="80" alt="">
 						<img src="{{asset('asset/image/IconInsta.svg')}}" width="80" height="80" alt="">
 						<img src="{{asset('asset/image/IconYoutube.svg')}}" width="80" height="80" alt="">
