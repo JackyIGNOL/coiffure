@@ -5,27 +5,32 @@
 {% endblock %}
 
 {% block body %}
-	<h1>coupe Homme</h1>
-	<h2>coupe classique</h2>
-
-
-	{# <h2>Style: Buzz cut</h2>
-																							<div class="coupe">
-																								<div class="coupeDNP">
-																									<img alt="Crew cut + Contours - Coiffures Homme Noir" data-srcset="https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401.jpg 768w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-274x300.jpg 274w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-696x761.jpg 696w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-384x420.jpg 384w" data-jpibfi-post-excerpt="" data-jpibfi-post-url="https://coupedecheveuxhomme.org/top-100-coiffures-homme-noir/" data-jpibfi-post-title="Top 100 Coiffures Homme Noir" data-jpibfi-="" data-src="http://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401.jpg" data-sizes="(max-width: 768px) 100vw, 768px" class="aligncenter wp-image-1517 size-full lazyloaded" src="http://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401.jpg" sizes="(max-width: 768px) 100vw, 768px" srcset="https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401.jpg 768w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-274x300.jpg 274w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-696x761.jpg 696w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-384x420.jpg 384w"><noscript><img class="aligncenter wp-image-1517 size-full" src="http://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401.jpg" alt="Crew cut + Contours - Coiffures Homme Noir" width="768" height="840" srcset="https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401.jpg 768w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-274x300.jpg 274w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-696x761.jpg 696w, https://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401-384x420.jpg 384w" sizes="(max-width: 768px) 100vw, 768px" data-jpibfi-post-excerpt="" data-jpibfi-post-url="https://coupedecheveuxhomme.org/top-100-coiffures-homme-noir/" data-jpibfi-post-title="Top 100 Coiffures Homme Noir" data-jpibfi-src="http://coupedecheveuxhomme.org/wp-content/uploads/2018/03/20902396_422923948102032_7042929634458992640_n1-e1518490234606-768x8401.jpg"></noscript>
-																									<div class="coupeNP">
-																										<h3>1. Crew cut + Contours</h3>
-																										<div class="prix">10 €</div>
-																									</div>
-																									<p>Une coupe de cheveux courte, avec de bons contours pour garder une allure propre et soignée.</p>
-																								</div> #}
-
-	<h3>style: Buzz cut</h3>
+	<h1>- Coupe Homme</h1>
+	<br>
+	<div class="blocService ">
+		<li>
+			<a href="{{path('coupeHomme')}}">
+				<button class="bouton">HOMME</button>
+			</a>
+		</li>
+		<li>
+			<a href="{{path('coupeFemme')}}">
+				<button class="bouton">FEMME</button>
+			</a>
+		</li>
+		<li>
+			<a href="{{path('coupeEnfant')}}">
+				<button class="bouton">ENFANT</button>
+			</a>
+		</li>
+	</div>
+	<h2><br></h2>
+	<h2>Style: Buzz cut</h2>
 	<div class="coupe">
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme1.jpg')}}" alt="Buzz cut + Contours + Dégradé">
 			<div class="coupeNP">
-				<h2>1. Buzz cut + Contours + Dégradé</h2>
+				<h3>1. Buzz cut + Contours + Dégradé</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>la classique Buzz Cut, sur cet exemple nous avons des contours parfaitement réalisés et un dégradé aux tempes qui rendent l’ensemble encore plus classe.</p>
@@ -34,7 +39,7 @@
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme2.jpg')}}" alt="Buzz cut + Barbe Déconnectée">
 			<div class="coupeNP">
-				<h2>2. Buzz cut + Barbe Déconnectée</h2>
+				<h3>2. Buzz cut + Barbe Déconnectée</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Sur cette coupe de cheveux pour homme noir nous avons la classique Buzz cut qui fonctionne à merveille avec une barbe déconnectée. En finition nous avons un dégradé bas sur les cotés et des contours parfaitement exécutés.</p>
@@ -44,7 +49,7 @@
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme3.jpg')}}" alt="Buzz cut + Dégradé à Blanc">
 			<div class="coupeNP">
-				<h2>3. Buzz cut + Dégradé à Blanc</h2>
+				<h3>3. Buzz cut + Dégradé à Blanc</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Ici nous avons un buzz cut sur lequel se forme de jolies waves. Avec un dégradé à blanc moyen et de bon contours. Une coiffure très esthétique avec un joli contraste.</p>
@@ -52,13 +57,13 @@
 	</div>
 
 
-	<h3>style: Waves</h3>
+	<h2>Style: Waves</h2>
 
 	<div class="coupe">
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme4.jpg')}}" alt="waves + Dégradé bas + Contours">
 			<div class="coupeNP">
-				<h2>4. Waves + Dégradé bas + Contours</h2>
+				<h3>4. Waves + Dégradé bas + Contours</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Les waves avec un dégradé bas fonctionnent à merveille comme on le voit sur cette coupe de cheveux. Les contours sont également parfaitement exécutés.</p>
@@ -67,7 +72,7 @@
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme5.jpg')}}" alt="Waves + Contours">
 			<div class="coupeNP">
-				<h2>5. Waves + Contours</h2>
+				<h3>5. Waves + Contours</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Un style parfait pour ceux qui veulent une allure classique mais raffinée.</p>
@@ -76,20 +81,20 @@
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme6.jpg')}}" alt="Waves + Dégradé aux tempes et à la nuque + Barbe Déconnectée">
 			<div class="coupeNP">
-				<h2>6. Waves + Dégradé aux tempes et à la nuque + Barbe Déconnectée</h2>
+				<h3>6. Waves + Dégradé aux tempes et à la nuque + Barbe Déconnectée</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Un magnifique dégradé aux tempes et à la nuque combiné avec des waves parfaitement réalisées et une barbe déconnectée.</p>
 		</div>
 	</div>
 
-	<h3>style: Afro et cheveux mi-long ou long</h3>
+	<h2>Style: Afro et cheveux mi-long ou long</h2>
 
 	<div class="coupe">
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme7.jpg')}}" alt="Afro + Contours">
 			<div class="coupeNP">
-				<h2>8. Afro + Contours</h2>
+				<h3>8. Afro + Contours</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Les afros forme arrondi + contours, cette coiffure devient incroyable comme vous pouvez le constater ici.</p>
@@ -99,7 +104,7 @@
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme8.jpg')}}" alt=" Tresses + Dégradé à Blanc + Barbe Déconnectée">
 			<div class="coupeNP">
-				<h2>9. Tresses + Dégradé à Blanc + Barbe Déconnectée</h2>
+				<h3>9. Tresses + Dégradé à Blanc + Barbe Déconnectée</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Des tresses exceptionnellement bien réalisées. Avec un dégradé à blanc, une barbe déconnectée et des contours parfaitement taillés.</p>
@@ -108,12 +113,28 @@
 		<div class="coupeDNP">
 			<img src="{{asset('asset/image/Homme9.jpg')}}" alt="Dreadlocks x Queue de cheval + Dégradé Moyen">
 			<div class="coupeNP">
-				<h2>10. Dreadlocks x Queue de cheval + Dégradé Moyen</h2>
+				<h3>10. Dreadlocks x Queue de cheval + Dégradé Moyen</h3>
 				<div class="prix">10 €</div>
 			</div>
 			<p>Dreadlocks attachées en queue de cheval, avec un dégradé à blanc moyen, et des contours soigneusement taillés.</p>
 		</div>
 	</div>
-
-	
+	<h2><br></h2>
+	<div class="blocService ">
+		<li>
+			<a href="{{path('coupeHomme')}}">
+				<button class="bouton">HOMME</button>
+			</a>
+		</li>
+		<li>
+			<a href="{{path('coupeFemme')}}">
+				<button class="bouton">FEMME</button>
+			</a>
+		</li>
+		<li>
+			<a href="{{path('coupeEnfant')}}">
+				<button class="bouton">ENFANT</button>
+			</a>
+		</li>
+	</div>
 {% endblock %}

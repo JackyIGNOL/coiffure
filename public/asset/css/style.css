@@ -10,9 +10,16 @@
 /* General */
 h1,h2,h3{
     letter-spacing: 0.1rem;
+
 }
-
-
+h1{
+    color: rgb(205, 185, 105);
+    font-family: KAGE;
+    font-size: 2.5em;
+}
+h2{
+    margin: 0;
+}
 body{
     width: 100%;
     margin: 0;
@@ -21,13 +28,12 @@ body{
     color: white;
     background-color: black;
     background-image: url("../image/fond.jpg");
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
-
 nav{
-
     padding: 3rem;
     width: 80vw;
     display: flex;
@@ -36,10 +42,7 @@ nav{
 li{
     display: inline;
     padding: 0px 15px;
-
-
 }
-
 a:-webkit-any-link{
     font-family: OldBlack, Courier,  fantasy, monospace  ;  
     font-size: 1rem;
@@ -75,7 +78,6 @@ a:-webkit-any-link{
     border-bottom-color: rgb(205, 185, 105);
     margin: 10px 0 10px 0;
 }
-
 .shop{
   text-align: center;
 }
@@ -84,9 +86,7 @@ a:-webkit-any-link{
     display: flex;
     justify-content: space-between;
     width: 80%;
-    
 }
-
 .bouton{
     background-color:   rgba(0, 0, 0, 0);
     border: 3px solid rgb(205, 185, 105);
@@ -153,16 +153,12 @@ a:-webkit-any-link{
     height: 200%;
     
 }
-
-
 .align{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-
-
 .text{
     text-align: center;
 }
@@ -177,48 +173,12 @@ a:-webkit-any-link{
     width: 225px;
 }
 
-/* COUPE ENFANT */
-.coupe{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.conditionsG{
+    letter-spacing: 0.1rem;
+    display: inline;
 }
-.coupeDNP {
-    /* border: solid 1px rgb(241, 241, 241); */
-    /* padding: 0 20px; */
-    width: 400px;
-}
-.coupeDNP img{
-    width: 100%;
-}
-.coupeNP {
-    display: flex;
-    justify-content: space-between;
-    /* font-size: 40px; */
-}
-h3 {
-    display: block;
-    /* font-size: 1.17em; */
-    /* margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px; */
-    font-weight: bold;
-    margin: 0;
-}
-.prix {
-    background-color: rgb(97, 97, 97);
-    border-radius: 5px;
-    padding: 0.5rem 0.5rem;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-}
-.description {
-    color: grey;
-    /* font-size: 40px; */
-    font-weight: 500;
+.form-check, #user_form_agreeTerms, .form-check-label, .form-group:last-of-type{
+    display: inline;
 }
 
 
@@ -231,14 +191,13 @@ h3 {
 	text-align: center;
 }
 
-.logoFooter{
-    /* display: inline-block;
+ /*.logoFooter{
+    display: inline-block;
     vertical-align: top; */
-    /* width: 40%; */
-}
+    /* width: 40%; 
+}*/
 
 footer{
-    margin-top: 20%;
     /* width: 80vw; */
     
     width: 100%;
@@ -259,5 +218,26 @@ footer{
     align-items: flex-start;
     justify-content: center;
     /* flex-direction: row; */
+}
+.presentation {
+    display: flex;
+    flex-direction: column;
+}
+.presentationT{
+    display: block;
+    min-width: 300px;
+    box-sizing: border-box;
+    padding: 1rem;
     
+}
+.presentationT p{
+    width: 100%;
+}
+@media screen and (min-width:974px){
+    .presentation {
+        flex-direction: row;
+    }
+}
+.company{
+    background-color: black
 }

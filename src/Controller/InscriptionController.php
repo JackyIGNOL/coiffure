@@ -27,7 +27,7 @@ class InscriptionController extends AbstractController
             $user->setPassword($hash);
             $manager->persist($user);
             $manager->flush();
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("app_login");
         }
         return $this->render("inscription/index.html.twig", [
             "formulaire" => $form->createView()

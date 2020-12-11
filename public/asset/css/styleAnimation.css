@@ -2,6 +2,7 @@
     -webkit-animation-name: zoomInRight;
     animation-name: zoomInRight;
     -webkit-animation-duration: 1s;
+    animation-delay: 2s;
     animation-duration: 1s;
     animation-delay: 2s;
     -webkit-animation-fill-mode: both;
@@ -41,4 +42,3 @@
     } 
   
  
-  
