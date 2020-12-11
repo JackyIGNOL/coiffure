@@ -19,7 +19,9 @@
 {% block body %}
 	{# <a href="{{ path('booking_new') }}">Ajouter un nouveau rendez-vous</a> #}
 	{#<div id="calendar-holder"></div> #}
-	h1
+		<h1>
+	Les Rendez-vous
+	</h1>
 	<br>
 		{% if app.user %}
 			<div class=""> Vous êtes déjà connecté à
@@ -28,6 +30,10 @@
 				<button class="bouton">Deconnectez-vous</button>
 			</a>
 		</div>
+		Vous êtes :<br>
+		{% for item in app.user.roles %}
+			<p>{{ item }}</p>
+		{% endfor %}
 		<h2>Vos rendez vous :</h2>
 		<h3>Vos rendez-vous futur :</h3>
 		{% for rendezvous in lesrendezvous %}

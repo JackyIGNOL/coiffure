@@ -10,20 +10,22 @@
 /* General */
 h1,h2,h3{
     letter-spacing: 0.1rem;
-
 }
 h1{
     color: rgb(205, 185, 105);
     font-family: KAGE;
     font-size: 2.5em;
+    vertical-align: baseline;
 }
 h2{
     margin: 0;
 }
 body{
     width: 100%;
+
     margin: 0;
     padding: 0;
+    letter-spacing: 0.1rem;
     font-family: OldBlack, fantasy, Courier, monospace  ;  
     color: white;
     background-color: black;
@@ -31,7 +33,6 @@ body{
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 nav{
     padding: 3rem;
@@ -57,7 +58,6 @@ a:-webkit-any-link{
 .kage{
     font-family: KAGE;
     font-size: 2.5em;
-   
 }
 .old{
     font-family: OldBlack, fantasy, Courier, monospace ;
@@ -109,13 +109,17 @@ a:-webkit-any-link{
     padding: 0.5rem;
 
 }
+.blocService li{
+    width:100%;
+}
+
 .service{
     background-color:   rgb(29, 28, 28);
     border: none;
     font-size: 2rem;
     font-family: OldBlack, fantasy, Courier, monospace ;
     color: rgb(205, 185, 105) ;
-    width: 150px;
+    width:100%;
     height: 300px;
 
 }
@@ -180,8 +184,6 @@ a:-webkit-any-link{
 .form-check, #user_form_agreeTerms, .form-check-label, .form-group:last-of-type{
     display: inline;
 }
-
-
 
 
 /* Footer */
