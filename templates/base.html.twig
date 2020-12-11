@@ -18,8 +18,6 @@
 		<link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
 		<link rel="stylesheet" href="{{asset('asset/css/styleAnimation.css')}}">
 		<link rel="stylesheet" href="{{asset('asset/css/stylecoupe.css')}}">
-
-
 	</head>
 	<body>
 		<header>
@@ -38,12 +36,19 @@
 						<a href="{{path('barberShop')}}">BOOK</a>
 					</li>
 					{% if app.user %}
-						{# <li><a href="{{path('app_logout')}}">DECONNEXION</a></li> #}
-						<li>
-							<a href="{{path('rendezvous')}}">
-								<button class="rdv">RENDEZ-VOUS</button>
-							</a>
-						</li>
+						{% if is_granted('ROLE_ADMIN') %}
+							<li>
+								<a href="{{path('admin')}}">
+									<button class="rdv">ADMIN</button>
+								</a>
+							</li>
+						{% else %}
+							<li>
+								<a href="{{path('rendezvous')}}">
+									<button class="rdv">RENDEZ-VOUS</button>
+								</a>
+							</li>
+						{% endif %}
 					{% else %}
 						<li>
 							<a href="{{path('app_login')}}">
@@ -77,8 +82,6 @@
 						<img src="{{asset('asset/image/IconEmail.svg')}}" width="80" height="80" alt="">
 						<p>luigjycoiffure@gmail.com</p>
 					</div>
-
-
 				</div>
 				<div class="centre">
 					<p>SUIVEZ-MOI</p>

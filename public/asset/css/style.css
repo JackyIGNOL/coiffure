@@ -22,8 +22,10 @@ h2{
 }
 body{
     width: 100%;
+
     margin: 0;
     padding: 0;
+    letter-spacing: 0.1rem;
     font-family: OldBlack, fantasy, Courier, monospace  ;  
     color: white;
     background-color: black;
