@@ -10,12 +10,12 @@
 /* General */
 h1,h2,h3{
     letter-spacing: 0.1rem;
-
 }
 h1{
     color: rgb(205, 185, 105);
     font-family: KAGE;
     font-size: 2.5em;
+    vertical-align: baseline;
 }
 h2{
     margin: 0;
@@ -31,7 +31,6 @@ body{
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 nav{
     padding: 3rem;
@@ -57,7 +56,6 @@ a:-webkit-any-link{
 .kage{
     font-family: KAGE;
     font-size: 2.5em;
-   
 }
 .old{
     font-family: OldBlack, fantasy, Courier, monospace ;
@@ -180,9 +178,6 @@ a:-webkit-any-link{
 .form-check, #user_form_agreeTerms, .form-check-label, .form-group:last-of-type{
     display: inline;
 }
-
-
-
 
 
 /* Footer */
