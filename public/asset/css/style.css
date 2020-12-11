@@ -109,13 +109,17 @@ a:-webkit-any-link{
     padding: 0.5rem;
 
 }
+.blocService li{
+    width:100%;
+}
+
 .service{
     background-color:   rgb(29, 28, 28);
     border: none;
     font-size: 2rem;
     font-family: OldBlack, fantasy, Courier, monospace ;
     color: rgb(205, 185, 105) ;
-    width: 150px;
+    width:100%;
     height: 300px;
 
 }
