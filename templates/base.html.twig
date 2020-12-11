@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>
 			{% block title %}
-			base
+				base
 			{% endblock %}
 		</title>
 		<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.1.0/main.min.js"></script>
@@ -16,15 +16,19 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@4.1.0/main.min.css">
 		<link rel="stylesheet" href="{{asset('asset/css/styleRdv.css')}}">
 		<link rel="stylesheet" href="{{asset('asset/css/style.css')}}">
-		
+
 	</head>
 	<body>
 		<header>
-			<nav>
+			<nav class="mainMenu">
 				<div>
-					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" width="200" height="200" alt="">
+					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" class="logo"  alt="">
 				</div>
-				<div>
+				<input type="checkbox" name="panel" class="dispNone" id="panel"/>
+				<label for="panel" class="menuTitle">
+					<img src="{{asset('asset/image/menu.png')}}" alt="">
+				</label>
+				<ul class="menu">
 					<li>
 						<a href="{{path('home')}}">ACCUEIL</a>
 					</li>
@@ -48,7 +52,7 @@
 							</a>
 						</li>
 					{% endif %}
-				</div>
+				</ul>
 			</nav>
 		</header>
 		<main>
@@ -62,16 +66,16 @@
 		<footer>
 			<div class="fondFooter">
 				<div class="logoFooter">
-					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" width="120" height="120" alt="">
+					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" class="logofooter" width="120" height="120" alt="">
 				</div>
 				<div class="footerCenter ">
 					<p>CONTACT</p>
 					<div class="align">
-						<img src="{{asset('asset/image/IconTel.svg')}}" width="80" height="80" alt="">
+						<img src="{{asset('asset/image/IconTel.svg')}}" class="iconfooter" alt="">
 						<p>+785 23 54 78 96 20</p>
 					</div>
 					<div class="align">
-						<img src="{{asset('asset/image/IconEmail.svg')}}" width="80" height="80" alt="">
+						<img src="{{asset('asset/image/IconEmail.svg')}}" class="iconfooter" alt="">
 						<p>luigjycoiffure@gmail.com</p>
 					</div>
 
@@ -80,9 +84,9 @@
 				<div class="centre">
 					<p>SUIVEZ-MOI</p>
 					<div>
-						<img src="{{asset('asset/image/IconFacebook.svg')}}" width="80" height="80" alt="">
-						<img src="{{asset('asset/image/IconInsta.svg')}}" width="80" height="80" alt="">
-						<img src="{{asset('asset/image/IconYoutube.svg')}}" width="80" height="80" alt="">
+						<img src="{{asset('asset/image/IconFacebook.svg')}}" class="iconfooter" alt="">
+						<img src="{{asset('asset/image/IconInsta.svg')}}" class="iconfooter" alt="">
+						<img src="{{asset('asset/image/IconYoutube.svg')}}" class="iconfooter" alt="">
 					</div>
 				</div>
 			</div>

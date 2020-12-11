@@ -8,6 +8,9 @@
     src: url(../fonts/KAGE-Freebies-Black.otf);
 }
 /* General */
+.imgluidjy{
+    width: 350px;
+}
 h1,h2,h3{
     letter-spacing: 0.1rem;
 
@@ -28,14 +31,18 @@ body{
     color: white;
     background-color: black;
     background-image: url("../image/fond.jpg");
-    /* background-attachment: fixed; */
+     background-attachment: fixed; 
     background-repeat: no-repeat;
     background-size: cover;
 
 }
+.logo{
+    width: 150px;
+
+}
 nav{
     padding: 3rem;
-    width: 80vw;
+    /* width: 80vw; */
     display: flex;
     justify-content: space-between;
 }
@@ -107,6 +114,7 @@ a:-webkit-any-link{
     color: rgb(205, 185, 105);
     font-size: 1rem;
     padding: 0.5rem;
+    
 
 }
 .service{
@@ -160,6 +168,9 @@ a:-webkit-any-link{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.align img{
+    padding-right: 1rem;
 }
 
 
@@ -244,11 +255,12 @@ h3 {
 	text-align: center;
 }
 
- /*.logoFooter{
-    display: inline-block;
-    vertical-align: top; */
-    /* width: 40%; 
-}*/
+/* .logofooter{
+    
+} */
+.iconfooter{
+    width: 30px;
+}
 
 footer{
     margin-top: 20%;
@@ -278,4 +290,100 @@ footer{
     background-color: black
     
 
+}
+
+/* Menu */
+
+
+.menu{
+    /* max-height: 0; */
+    list-style:none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuActive{
+    /* color: rgb(205, 185, 105); */
+    font-weight: 700;
+}
+.menu li{
+    position: relative;
+    margin: 0;
+    /* border-top:1px solid rgb(205, 185, 105); */
+    
+}
+.menu a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .7rem;
+    /* color: rgb(205, 185, 105); */
+    font-weight: 500;
+    text-decoration: none;
+}
+.menu a:hover{
+    text-decoration: none;
+    color: rgb(205, 185, 105);
+    cursor: pointer;
+    
+}
+
+.menu li:first-child{
+    border-right:0;
+}
+.menuTitle{
+ position: absolute;
+right: 0;
+    height:40px;
+    width: 40px;
+}
+.menuTitle:hover{
+    cursor: pointer;
+}
+
+.dispNone{
+    margin: 0;
+    padding: 0;
+    display:none;
+}
+/* Si la checkbox vaut checked=true */
+input[name="panel"]:checked ~ .menu{
+    max-height:800px;
+    transition:2s;
+}
+/* Si la checkbox vaut checked=false */
+input[name="panel"]:not(:checked) ~ .menu{
+    max-height:0;
+    transition:.5s;
+}
+
+
+@media screen and (min-width:970px){
+    /* En format lg l'icone menu burger est display none */
+    .logo{
+        width: 200px;
+
+    
+    }
+    .imgluidjy{
+        width: auto;
+    }
+    label.menuTitle{
+        display:none;
+    }
+    .menu{
+        min-height: 3rem;
+        flex-direction: row;
+    }
+    .menu li, .menu a{
+        border:none;
+    }
+    .menu li{
+        display: flex;
+        height: 3rem;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
 }
