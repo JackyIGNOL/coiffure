@@ -21,11 +21,15 @@
 	</head>
 	<body>
 		<header>
-			<nav>
+			<nav class="mainMenu">
 				<div>
-					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" width="200" height="200" alt="">
+					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" class="logo"  alt="">
 				</div>
-				<div>
+				<input type="checkbox" name="panel" class="dispNone" id="panel"/>
+				<label for="panel" class="menuTitle">
+					<img src="{{asset('asset/image/menu.png')}}" alt="">
+				</label>
+				<ul class="menu">
 					<li>
 						<a href="{{path('home')}}">ACCUEIL</a>
 					</li>
@@ -56,7 +60,7 @@
 							</a>
 						</li>
 					{% endif %}
-				</div>
+				</ul>
 			</nav>
 		</header>
 		<main>
@@ -70,16 +74,16 @@
 		<footer>
 			<div class="fondFooter">
 				<div class="logoFooter">
-					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" width="120" height="120" alt="">
+					<img src="{{asset('asset/image/LogoProjetJaune.svg')}}" class="logofooter" width="120" height="120" alt="">
 				</div>
 				<div class="footerCenter ">
 					<p>CONTACT</p>
 					<div class="align">
-						<img src="{{asset('asset/image/IconTel.svg')}}" width="80" height="80" alt="">
+						<img src="{{asset('asset/image/IconTel.svg')}}" class="iconfooter" alt="">
 						<p>+785 23 54 78 96 20</p>
 					</div>
 					<div class="align">
-						<img src="{{asset('asset/image/IconEmail.svg')}}" width="80" height="80" alt="">
+						<img src="{{asset('asset/image/IconEmail.svg')}}" class="iconfooter" alt="">
 						<p>luigjycoiffure@gmail.com</p>
 					</div>
 				</div>
