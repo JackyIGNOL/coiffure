@@ -5,32 +5,37 @@
 {% endblock %}
 {# {% block stylesheets %}{% endblock %} #}
 {% block body %}
-
-	<div class="presentation">
-		<img src="{{asset('asset/image/luidjy.jpg')}}" class="imagepresentation" alt="image de Luidjy en train de couper des cheveux" width="300px" height="auto">
-		<div class="presentationT">
-			<h1 class="jauneC kage">- Presentation</h1>
-			<p>Bonjour et bienvenue sur la page Luidjy's Coiffure.</p>
-			<p>La coiffure est une passion, faire de votre instant coiffure un moment de détente pour vous, une véritable pause, afin de vous rendre unique.</p>
-			<p>J'attache, le plus grand soin à la qualité de mes services, je prendrais le temps de vous écouter afin de vous proposer ce qu’il vous conviendra le mieux en respectant votre personnalité.
-			</p>
-			<p>Faites moi confiance pour révéler la beauté de vos cheveux et mettre en valeur votre capital séduction.
-			</p>
+	<div "container-fluid">
+		<div class="row">
+			<div class="col-4 col-md-2 ">
+				<div class="presentation">
+					<img src="{{asset('asset/image/luidjy.jpg')}}" class="imagepresentation" alt="image de Luidjy en train de couper des cheveux" width="300px" height="auto">
+					<div class="presentationT">
+						<h1 class="jauneC kage">- Presentation</h1>
+						<p>Bonjour et bienvenue sur la page Luidjy's Coiffure.</p>
+						<p>La coiffure est une passion, faire de votre instant coiffure un moment de détente pour vous, une véritable pause, afin de vous rendre unique.</p>
+						<p>J'attache, le plus grand soin à la qualité de mes services, je prendrais le temps de vous écouter afin de vous proposer ce qu’il vous conviendra le mieux en respectant votre personnalité.
+						</p>
+						<p>Faites moi confiance pour révéler la beauté de vos cheveux et mettre en valeur votre capital séduction.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h1>
+					<b>VOTRE SALON DE COIFFURE AU MOULE</b>
+				</h1>
+				<span style="font-size:26px;line-height:30px; color: red ;">
+					<img src="{{asset('asset/image/attention.png')}}" width="80" height="80" alt="">
+					Attention
+				</span>
+				<br>
+				<span style="font-size:26px;line-height:30px; color: white ;">Chers clients,
+					<br>en raison de la crise sanitaire Covid-19,<br>
+					munissez-vous d'un masque car il est obligatoire.
+					<br>
+					Merci de vous présenter à l'heure de votre rendez-vous pris lors de votre réservation.</span>
+			</div>
 		</div>
-
-	</div>
-	<div>
-		<h1>
-			<b>VOTRE SALON DE COIFFURE AU MOULE</b>
-		</h1>
-		<span style="font-size:26px;line-height:30px; color: red ;"> 
-		<img src="{{asset('asset/image/attention.png')}}" width="80" height="80" alt="">
-		Attention 
-		</span>
-<br>
-		<span style="font-size:26px;line-height:30px; color: white ;">Chers clients,
-			<br>en raison de la crise sanitaire Covid-19,<br>
-			munissez-vous d'un masque car il est obligatoire. <br>
-			Merci de vous présenter à l'heure de votre rendez-vous pris lors de votre réservation.</span>
 	</div>
 {% endblock %}
