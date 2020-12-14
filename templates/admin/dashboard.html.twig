@@ -22,7 +22,7 @@
 		<h1>Bienvenu Admin...</h1>
 
 		<div class="">
-			Vous êtes déjà connecté à
+			Bonjour {{ app.user.prenom }} {{ app.user.nom }}, vous êtes déjà connecté à
 			{{ app.user.username }},
 			<a href="{{ path('app_logout') }}">
 				<button class="bouton">Deconnectez-vous</button>
@@ -48,14 +48,7 @@
 					{{rendezvous.heureAt|date("d/m/Y")}}
 					à
 					{{rendezvous.heureAt|date("H")}}
-					heures, Utilisateur:
-					{% for user in lesusers %}
-						{% if rendezvous.id == user.id %}
-							{{ user.prenom }} 
-							{{ user.nom }}
-						{% endif %}
-					{% endfor %}
-					{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+					heures, avec {{ rendezvous.user.prenom }} {{ rendezvous.user.nom }}.
 				</p>
 			{% endif %}
 		{% endfor %}
@@ -70,8 +63,7 @@
 					{{rendezvous.heureAt|date("d/m/Y")}}
 					à
 					{{rendezvous.heureAt|date("h")}}
-					heures.
-					{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+					heures, avec {{ rendezvous.user.prenom }} {{ rendezvous.user.nom }}.
 				</p>
 				{% set existe = false %}
 			{% endif %}
