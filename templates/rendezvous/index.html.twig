@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mes Rendez-vous
-{% endblock %}
+{% block title %}Mes Rendez-vous{% endblock %}
 
 {% block stylesheets %}{% endblock %}
 
@@ -19,47 +18,44 @@
 {% block body %}
 	{# <a href="{{ path('booking_new') }}">Ajouter un nouveau rendez-vous</a> #}
 	{#<div id="calendar-holder"></div> #}
-		<h1>
-	Les Rendez-vous
-	</h1>
-	<br>
-		{% if app.user %}
-			<div class=""> Vous êtes déjà connecté à
-			{{ app.user.username }},
-			<a href="{{ path('app_logout') }}">
-				<button class="bouton">Deconnectez-vous</button>
-			</a>
-		</div>
-		Vous êtes :<br>
-		{% for item in app.user.roles %}
-			<p>{{ item }}</p>
-		{% endfor %}
-		<h2>Vos rendez vous :</h2>
-		<h3>Vos rendez-vous futur :</h3>
-		{% for rendezvous in lesrendezvous %}
-			{% if rendezvous.getUser == app.user %}
-				{% if rendezvous.heureAt|date("Ymd") > "now"|date("Ymd") %}
-					<p>
-						<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
-							<button class="bouton">
-								<span>
-									Supprimer ce rendez-vous >
-								</span>
-							</button>
-						</a>
-						Le
-						{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
-						{{rendezvous.heureAt|date("d/m/Y")}}
-						à
-						{{rendezvous.heureAt|date("h")}}
-						heures.
-						{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
-					</p>
-				{% endif %}
+	<h1>Les Rendez-vous</h1><br>
+	{% if app.user %}
+		<div class=""> Vous êtes déjà connecté à
+		{{ app.user.username }},
+		<a href="{{ path('app_logout') }}">
+			<button class="bouton">Deconnectez-vous</button>
+		</a>
+	</div>
+	Vous êtes :<br>
+	{% for item in app.user.roles %}
+		<p>{{ item }}</p>
+	{% endfor %}
+	<h2>Vos rendez vous :</h2>
+	<h3>Vos rendez-vous futur :</h3>
+	{% for rendezvous in lesrendezvous %}
+		{% if rendezvous.getUser == app.user %}
+			{% if rendezvous.heureAt|date("Ymd") > "now"|date("Ymd") %}
+				<p>
+					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
+						<button class="bouton">
+							<span>
+								Supprimer ce rendez-vous >
+							</span>
+						</button>
+					</a>
+					Le
+					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
+					{{rendezvous.heureAt|date("d/m/Y")}}
+					à
+					{{rendezvous.heureAt|date("h")}}
+					heures.
+					{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+				</p>
 			{% endif %}
-		{% endfor %}
-		<h3>Vos rendez-vous passé :</h3>
-		{% for rendezvous in lesrendezvous %}
+		{% endif %}
+	{% endfor %}
+	<h3>Vos rendez-vous passé :</h3>
+	{% for rendezvous in lesrendezvous %}
 			{% if rendezvous.getUser == app.user %}
 				{% if rendezvous.heureAt|date("Ymd") <= "now"|date("Ymd") %}
 					<p>
@@ -73,11 +69,11 @@
 					</p>
 				{% endif %}
 			{% endif %}
-		{% endfor %}
-		<h2>
-			Rendez-vous Disponibles :
-		</h2>
-		<div class="semaine ">
+	{% endfor %}
+	<h2>
+		Rendez-vous Disponibles :
+	</h2>
+	<div class="semaine ">
 			{% set i = 1 %}
 			{% for item in lesjh %}
 				<div class="jour">
@@ -113,9 +109,7 @@
 					{% endfor %}
 				</div>
 			{% endfor %}
-		</div>
-
-
+	</div>
 	{% endif %}
 {% endblock %}
 

@@ -47,10 +47,11 @@
 					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
 					{{rendezvous.heureAt|date("d/m/Y")}}
 					à
-					{{rendezvous.heureAt|date("h")}}
+					{{rendezvous.heureAt|date("H")}}
 					heures, Utilisateur:
 					{% for user in lesusers %}
 						{% if rendezvous.id == user.id %}
+							{{ user.prenom }} 
 							{{ user.nom }}
 						{% endif %}
 					{% endfor %}
