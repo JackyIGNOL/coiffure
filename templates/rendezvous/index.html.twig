@@ -30,7 +30,7 @@
 	<h3>Vos rendez-vous futur :</h3>
 	{% for rendezvous in lesrendezvous %}
 		{% if rendezvous.getUser == app.user %}
-			{% if rendezvous.heureAt|date("Ymd") > "now"|date("Ymd") %}
+			{% if rendezvous.heureAt|date("YmdHis") > "now"|date("YmdHis") %}
 				<p>
 					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
 						<button class="bouton">
@@ -53,7 +53,7 @@
 	<h3>Vos rendez-vous passé :</h3>
 	{% for rendezvous in lesrendezvous %}
 			{% if rendezvous.getUser == app.user %}
-				{% if rendezvous.heureAt|date("Ymd") <= "now"|date("Ymd") %}
+				{% if rendezvous.heureAt|date("YmdHis") <= "now"|date("YmdHis") %}
 					<p>
 						Le
 						{{ trans_day_hash[rendezvous.heureAt|date('l')] }}

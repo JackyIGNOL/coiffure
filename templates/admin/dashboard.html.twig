@@ -14,12 +14,11 @@
         "Friday": "Vendredi", 
         "Saturday": "Samedi", 
         "Sunday": "Dimanche" 
-    } 
-%}
+    } %}
 
 {% block body %}
 	{% if is_granted('ROLE_ADMIN') %}
-		<h1>Bienvenu Admin...</h1>
+		<h1>Bienvenu Admin,</h1>
 
 		<div class="">
 			Bonjour {{ app.user.prenom }} {{ app.user.nom }}, vous êtes déjà connecté à
@@ -34,7 +33,7 @@
 		<h2>Vos rendez vous :</h2>
 		<h3>- Vos rendez-vous futurs :</h3>
 		{% for rendezvous in lesrendezvous %}
-			{% if rendezvous.heureAt|date("Ymd") > "now"|date("Ymd") %}
+			{% if rendezvous.heureAt|date("YmdHis") >= "now"|date("YmdHis") %}
 				<p>
 					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
 						<button class="bouton">
@@ -56,7 +55,7 @@
 		{% set existe = true %}
 		{% for rendezvous in lesrendezvous %}
 
-			{% if rendezvous.heureAt|date("Ymd") <= "now"|date("Ymd") %}
+			{% if rendezvous.heureAt|date("YmdHis") < "now"|date("YmdHis") %}
 				<p>
 					Le
 					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
