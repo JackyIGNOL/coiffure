@@ -39,8 +39,8 @@ class RendezvousController extends AbstractController
             array_push($leshoraires, $i);
         }
         $lesjours2 = [];
-        $now   = new DateTime;
 
+        $now   = new DateTime;
         for ($i = 1; $i < 8; $i++) {
             $clone = clone $now;
             $modif = '+' . $i . ' day';
