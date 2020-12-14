@@ -8,7 +8,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: red 1px solid;
 }
 .jour h3{
     font-size: 1.8rem;
