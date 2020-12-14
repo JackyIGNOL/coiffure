@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+	{% block title %}
+		Admin
+	{% endblock %}
+{% endblock %}
+{% block body %}
+	{% if is_granted('ROLE_ADMIN') %}
+		<h1>Bienvenu Admin...</h1>
+		<h2>
+			<div class="">
+				Vous êtes déjà connecté à
+				{{ app.user.username }},
+				<a href="{{ path('app_logout') }}">
+					<button class="bouton">Deconnectez-vous</button>
+				</a>
+			</div>
+			{% if app.user %}
+				{{ app.user.username }},<br>
+				Vous êtes :<br>
+				{% for item in app.user.roles %}
+					<p>{{ item }}</p>
+				{% endfor %}
+
+				<br><br>
+			{# <br><br><br> #}
+				{#<br><br><br><br><br> #}
+			</h2>
+		{% endif %}
+	{% endif %}
+{% endblock %}
+{% block javascripts %}{% endblock %}
