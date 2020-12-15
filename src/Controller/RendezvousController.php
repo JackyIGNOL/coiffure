@@ -23,10 +23,8 @@ class RendezvousController extends AbstractController
     {
         $repositoryuser = $this->getDoctrine()->getRepository(User::class);
         $repositoryrdv = $this->getDoctrine()->getRepository(Rendezvous::class);
-        $repositorysemaine = $this->getDoctrine()->getRepository(Semaine::class);
         $lesusers = $repositoryuser->findAll();
         $lesrendezvous = $repositoryrdv->findAll();
-        $lasemaine = $repositorysemaine->findAll();
 
         $lesjours = [];
         for ($i = 1; $i <= 8; $i++) {

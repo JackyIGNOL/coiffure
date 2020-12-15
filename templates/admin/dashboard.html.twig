@@ -20,6 +20,15 @@
 	{% if is_granted('ROLE_ADMIN') %}
 		<h1>Bienvenu Admin,</h1>
 
+		<a href="{{path("semaine")}} ">
+			<button class="bouton">
+				<span>
+					Semaine
+				</span>
+			</button>
+		</a>
+
+
 		<div class="">
 			Bonjour {{ app.user.prenom }} {{ app.user.nom }}, vous êtes déjà connecté à
 			{{ app.user.username }},

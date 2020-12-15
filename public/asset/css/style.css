@@ -69,10 +69,7 @@ a:-webkit-any-link{
 .old{
     font-family: OldBlack, fantasy, Courier, monospace ;
 }
-.corps{
-    margin: auto;
-    width: 80%;
-}
+
 .champ{
     background-color: rgba(0, 0, 0, 0.5) ;
     width: 100%;
@@ -172,9 +169,7 @@ a:-webkit-any-link{
     justify-content: center;
     text-align: center;
 }
-.align img{
-    padding-right: 1rem;
-}
+
 .text{
     text-align: center;
 }
@@ -214,6 +209,8 @@ a:-webkit-any-link{
 
 footer{
     /* width: 80vw; */
+    padding: 0;
+
     width: 100%;
     color:  #ffffff;
     background-color:  rgba(0, 0, 0, 0.5);
@@ -257,7 +254,10 @@ footer{
     }
 }
 .company{
-    background-color: black
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 /* Menu */
@@ -327,7 +327,7 @@ input[name="panel"]:not(:checked) ~ .menu{
 }
 
 
-@media screen and (min-width:970px){
+@media screen and (min-width:992px){
     /* En format lg l'icone menu burger est display none */
     .logo{
         width: 200px;

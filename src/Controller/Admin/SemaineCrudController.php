@@ -17,7 +17,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 class SemaineCrudController extends AbstractCrudController
 {
 
-
     public static function getEntityFqcn(): string
     {
         return Semaine::class;
