@@ -14,15 +14,23 @@
         "Friday": "Vendredi", 
         "Saturday": "Samedi", 
         "Sunday": "Dimanche" 
-    } 
-%}
+    } %}
 
 {% block body %}
 	{% if is_granted('ROLE_ADMIN') %}
-		<h1>Bienvenu Admin...</h1>
+		<h1>Bienvenu Admin,</h1>
+
+		<a href="{{path("semaine")}} ">
+			<button class="bouton">
+				<span>
+					Semaine
+				</span>
+			</button>
+		</a>
+
 
 		<div class="">
-			Vous êtes déjà connecté à
+			Bonjour {{ app.user.prenom }} {{ app.user.nom }}, vous êtes déjà connecté à
 			{{ app.user.username }},
 			<a href="{{ path('app_logout') }}">
 				<button class="bouton">Deconnectez-vous</button>
@@ -34,7 +42,7 @@
 		<h2>Vos rendez vous :</h2>
 		<h3>- Vos rendez-vous futurs :</h3>
 		{% for rendezvous in lesrendezvous %}
-			{% if rendezvous.heureAt|date("Ymd") > "now"|date("Ymd") %}
+			{% if rendezvous.heureAt|date("YmdHis") >= "now"|date("YmdHis") %}
 				<p>
 					<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
 						<button class="bouton">
@@ -47,14 +55,8 @@
 					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
 					{{rendezvous.heureAt|date("d/m/Y")}}
 					à
-					{{rendezvous.heureAt|date("h")}}
-					heures, Utilisateur:
-					{% for user in lesusers %}
-						{% if rendezvous.id == user.id %}
-							{{ user.nom }}
-						{% endif %}
-					{% endfor %}
-					{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+					{{rendezvous.heureAt|date("H")}}
+					heures, avec {{ rendezvous.user.prenom }} {{ rendezvous.user.nom }}.
 				</p>
 			{% endif %}
 		{% endfor %}
@@ -62,15 +64,14 @@
 		{% set existe = true %}
 		{% for rendezvous in lesrendezvous %}
 
-			{% if rendezvous.heureAt|date("Ymd") <= "now"|date("Ymd") %}
+			{% if rendezvous.heureAt|date("YmdHis") < "now"|date("YmdHis") %}
 				<p>
 					Le
 					{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
 					{{rendezvous.heureAt|date("d/m/Y")}}
 					à
 					{{rendezvous.heureAt|date("h")}}
-					heures.
-					{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+					heures, avec {{ rendezvous.user.prenom }} {{ rendezvous.user.nom }}.
 				</p>
 				{% set existe = false %}
 			{% endif %}

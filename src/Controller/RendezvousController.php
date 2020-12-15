@@ -108,8 +108,6 @@ class RendezvousController extends AbstractController
         $repositoryrdv = $this->getDoctrine()->getRepository(Rendezvous::class);
         $user = $repositoryuser->find($id);
         $lesrendezvous = $repositoryrdv->findAll();
-
-
         $input = $jour . " " . $heur . ":00:00";
         $date4 = DateTime::createFromFormat('Y-m-d H:i:s', $input);
 
