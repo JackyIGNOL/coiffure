@@ -2,17 +2,18 @@
 
 namespace App\Controller;
 
+use DateTime;
 use App\Entity\User;
+use App\Entity\Semaine;
 use App\Entity\Rendezvous;
 use App\Form\UserFormType;
 use App\Form\RendesVousType;
-use DateTime;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class RendezvousController extends AbstractController
 {
@@ -23,8 +24,10 @@ class RendezvousController extends AbstractController
     {
         $repositoryuser = $this->getDoctrine()->getRepository(User::class);
         $repositoryrdv = $this->getDoctrine()->getRepository(Rendezvous::class);
+        $repositorysemaine = $this->getDoctrine()->getRepository(Semaine::class);
         $lesusers = $repositoryuser->findAll();
         $lesrendezvous = $repositoryrdv->findAll();
+        $lasemaine = $repositorysemaine->findAll();
 
         $lesjours = [];
         for ($i = 1; $i <= 8; $i++) {
@@ -32,14 +35,11 @@ class RendezvousController extends AbstractController
             array_push($lesjours, $input);
         }
         $leshoraires = [];
-        for ($i = 8; $i <= 11; $i++) {
+        for ($i = 1; $i <= 24; $i++) {
             array_push($leshoraires, $i);
         }
-        for ($i = 14; $i <= 17; $i++) {
-            array_push($leshoraires, $i);
-        }
-        $lesjours2 = [];
 
+        $lesjours2 = [];
         $now   = new DateTime;
         for ($i = 1; $i < 8; $i++) {
             $clone = clone $now;
@@ -54,9 +54,27 @@ class RendezvousController extends AbstractController
             $modif = '+' . $i . ' day';
             $clone->modify($modif);
             foreach ($leshoraires as $heure) {
-                $clone2 = clone $clone;
-                $clone2->setTime($heure, 0, 0);
-                $lesjh[$i][$heure] = $clone2;
+                foreach ($lasemaine as $lejour) {
+                    $heuredispo = false;
+                    $trucday =  date_format($clone, 'l');
+                    if ($trucday == $lejour->getJour()) {
+                        $lhoraire = $lejour->getHoraire();
+                        dd($leshoraires, $lasemaine, $lejour->getHoraire(), $lhoraire);
+
+                        foreach ($lhoraire as $value) {
+                            if ($value == $heure) {
+                                $heuredispo = true;
+                            }
+                        }
+                    }
+                    if ($heuredispo) {
+                        $clone2 = clone $clone;
+                        $clone2->setTime($heure, 0, 0);
+                        $lesjh[$i][$heure] = $clone2;
+                    }
+                    /* dd($lejour, $lasemaine, $heuredispo, $clone, $trucday, $lejour->getJour(), $lejour->getHoraire(), $heure);
+                 */
+                }
             }
         }
 

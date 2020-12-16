@@ -33,36 +33,43 @@ class SemaineController extends AbstractController
     public function ajoutheure($jour, $heure, ObjectManager $objectManager)
     {
         $repositorysemaine = $this->getDoctrine()->getRepository(Semaine::class);
-        /* dd($repositorysemaine); */
-        $lejour = $repositorysemaine->find($jour);
         $lejour2 = $repositorysemaine->findAll();
-        /* $lejour3 = $repositorysemaine->findBy(array($jour)); */
-
-
-
         foreach ($lejour2 as $jour2) {
             if ($jour2->getJour() == $jour) {
                 if ($jour2->getHoraire() == null) {
                     $leshoraires = [];
-                    /* dd($jour2, $leshoraires); */
                 } else {
                     $leshoraires = $jour2->getHoraire();
                 }
                 array_push($leshoraires, $heure);
                 $jour2->setHoraire($leshoraires);
-                /* dd($lejour2, $jour, $jour2, $leshoraires); */
-                /* array_push($horaire, $heure); */
                 $objectManager->persist($jour2);
                 $objectManager->flush();
             }
         }
-        /* 
-        dd($lejour, $lejour2, $jour, $heure);
-        $horaire = $lejour->getHoraire();
-        array_push($horaire, $heure);
-        $lejour->setHoraire($horaire);
-        $objectManager->persist($lejour);
-        $objectManager->flush(); */
+        return $this->redirectToRoute("semaine");
+    }
+    /**
+     * @Route("/semaine/remove/{jour}/{heure}", name="removeheure")
+     */
+    public function deleteRendezVous($jour, $heure)
+    {
+        $objectManager = $this->getDoctrine()->getManager();
+        $repositorysemaine = $this->getDoctrine()->getRepository(Semaine::class);
+        $lejour2 = $repositorysemaine->findAll();
+        foreach ($lejour2 as $jour2) {
+            if ($jour2->getJour() == $jour) {
+                $leshoraires = $jour2->getHoraire();
+                foreach ($leshoraires as $key => $value) {
+                    if ($value == $heure) {
+                        unset($leshoraires[$key]);
+                        $jour2->setHoraire($leshoraires);
+                        $objectManager->persist($jour2);
+                        $objectManager->flush();
+                    }
+                }
+            }
+        }
         return $this->redirectToRoute("semaine");
     }
 }
