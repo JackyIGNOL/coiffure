@@ -23,7 +23,7 @@ class Semaine
     private $jour;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\Column(type="json", nullable=true)
      */
     private $horaire = [];
 

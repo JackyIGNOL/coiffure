@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Semaine{% endblock %}
+{% block title %}Semaine
+{% endblock %}
 {% set trans_day_hash = { 
     "Monday": "Lundi", 
     "Tuesday": "Mardi", 
@@ -12,49 +13,42 @@
 } %}
 
 {% block body %}
-    {% if app.user %}
-	    {% if is_granted('ROLE_ADMIN') %}
-            <h1>Semaine</h1>
-            <form action="">
-            {% for jour in lasemaine %}
-               <br><p>{{trans_day_hash[jour.jour]}}  </p>
-               {# {{jour.horaire}} #}
-               <div class = "horizontal">
-                {% for heure in leshoraires %}
-                    <a href="{{path("ajoutheure",{'jour':jour.jour,'heure':heure})}} ">
-					    <button class="bouton heurea align">
-					    	<span class="textcenter">{{heure}} </span>
-					    </button>
-					</a>
-                {% endfor %}
-                </div>
-            {% endfor %}
-                <br><br>
-                <button type="submit" class="bouton">Enregistrer</button>
-            </form>
-            <br><br>
-        {% endif %}
-    {% endif %}
+	{% if app.user %}
+		{% if is_granted('ROLE_ADMIN') %}
+			<h1>Votre Semaine</h1>
+			<h2>cliquez sur les horaires habituel ou vous êtes disponible durant la semaine:</h2>
+			{% for jour in lasemaine %}
+				<br><h2>{{trans_day_hash[jour.jour]}}
+					:
+				</h2>
+				<div class="horizontal">
+					{% for heure in leshoraires %}
+						{% set horaireExistepas = true %}
+						{% for item in jour.horaire %}
+							{% if item == heure %}
+								{% set horaireExistepas = false %}
+							{% endif %}
+						{% endfor %}
+						{% if horaireExistepas == true %}
+							<a href="{{path("ajoutheure",{'jour':jour.jour,'heure':heure})}} ">
+								<button class="bouton heurea align">
+									<span class="textcenter">{{heure}}
+									</span>
+								</button>
+							</a>
+						{% else %}
+							<a href="{{path("removeheure",{'jour':jour.jour,'heure':heure})}} ">
+								<button class="boutondispo heurea align">
+									<span class="textcenter">{{heure}}
+									</span>
+								</button>
+							</a>
+						{% endif %}
+					{% endfor %}
+				</div>
+			{% endfor %}
+			<br><br>
+		{% endif %}
+	{% endif %}
 {% endblock %}
-{% block javascripts %}
-    <script>
-        console.log("test js");
-        var champs = document.querySelectorAll("Monday");
-
-        console.log(champs);
-
-        for (let index = 0; index < champs.length; index++) {
-            console.log(champs[index]);
-        }
-        document.addEventListener("submit", function (e) {
-            e.preventDefault();
-            for (let index = 0; index < champs.length; index++) {
-                console.log(champs[index]);
-            }
-        })
-        
-
-    </script>
-    
-
-{% endblock %}
+{% block javascripts %}{% endblock %}

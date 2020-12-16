@@ -1,6 +1,6 @@
 composer create-project symfony/website-skeleton my_project_name
 
-/////INSTALLATION dans terminal////
+/////INSTALLATION dans terminal///////
 composer create-project symfony/website-skeleton test
 cd .\test\
 composer require server --dev ^4.4.2
