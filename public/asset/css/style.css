@@ -31,7 +31,7 @@ body{
     color: white;
     background-color: black;
     background-image: url("../image/fond.jpg");
-     background-attachment: fixed; 
+    background-attachment: fixed; 
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
@@ -39,7 +39,6 @@ body{
 }
 .logo{
     width: 150px;
-
 }
 nav{
     padding: 3rem;
@@ -96,7 +95,6 @@ a:-webkit-any-link{
     border: 3px solid rgb(205, 185, 105);
     color: rgb(205, 185, 105);
     font-size: 1.5rem;
-
 }
 
 .boutonreserver{
@@ -104,14 +102,12 @@ a:-webkit-any-link{
     border: 3px solid red;
     color: red;
     font-size: 1.5rem;
-
 }
 .boutondispo{
     background-color:   rgba(0, 0, 0, 0);
     border: 3px solid green;
     color: green;
     font-size: 1.5rem;
-
 }
 
 .rdv{
@@ -120,7 +116,6 @@ a:-webkit-any-link{
     color: rgb(205, 185, 105);
     font-size: 1rem;
     padding: 0.5rem;
-
 }
 button:hover{
     text-decoration: none;
@@ -262,14 +257,12 @@ button:hover{
 }
 
 footer{
-    /* width: 80vw; */
-    padding: 0;
-
+    padding: 0 !important;
     width: 100%;
     color:  #ffffff;
     background-color:  rgba(0, 0, 0, 0.5);
-    position: relative;
-    bottom: 0px;
+    position: absolute;
+    bottom: -380px;
 } 
 .fondFooter{
     display: flex;
@@ -351,11 +344,16 @@ footer{
     border-right:0;
 }
 .menuTitle{
- position: absolute;
-right: 0;
-    height:40px;
-    width: 40px;
+    position: absolute;
+    right: 2rem;
+    height: 5rem;
+    width: 5rem;
 }
+.menuTitle img{
+   width: 100%;
+}
+
+
 .menuTitle:hover{
     cursor: pointer;
 }
@@ -369,6 +367,7 @@ right: 0;
 input[name="panel"]:checked ~ .menu{
     max-height:800px;
     transition:2s;
+    margin-right: 5rem;
 }
 /* Si la checkbox vaut checked=false */
 input[name="panel"]:not(:checked) ~ .menu{
