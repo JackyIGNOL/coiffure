@@ -73,7 +73,6 @@
 		<h2>
 			Rendez-vous Disponibles :
 		</h2>
-		<h2>debut</h2>
 		<div class="semaine ">
 			{% set i = 1 %}
 			{% for item in lasemaine %}
@@ -85,7 +84,6 @@
 
 					</h3>
 					{% for item2 in lasemaine %}
-
 						{% if njour|date('l') == item2.jour %}
 							{% for i in 1..24 %}
 								{% for item3 in item2.horaire %}
@@ -120,14 +118,10 @@
 							{% endfor %}
 						{% endif %}
 					{% endfor %}
-
 					{% set i = i + 1 %}
-
 				</div>
 			{% endfor %}
-
 		</div>
-		<h2>fin</h2>
 	{% endif %}
 {% endblock %}
 
