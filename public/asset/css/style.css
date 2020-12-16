@@ -181,9 +181,6 @@ button:hover{
     justify-content: center;
     text-align: center;
 }
-.align img{
-    padding-right: 1rem;
-}
 .text{
     text-align: center;
 }
@@ -208,6 +205,43 @@ button:hover{
 
 
 /* Footer */
+.reseau {
+  cursor: pointer;  
+    
+}
+.reseau:hover #facebookCercle{
+    
+    stroke: #ffffff;
+}    
+.reseau:hover #facebookIcon{
+    
+    fill: #ffffff;
+}
+.reseau:hover #instaCercle{
+    
+    stroke: #ffffff;
+}
+.reseau:hover #instaIcon1{
+    
+    fill: #ffffff;
+}
+.reseau:hover #instaIcon2{
+    
+    fill: #ffffff;
+}
+.reseau:hover #instaIcon3{
+    
+    fill: #ffffff;
+}
+.reseau:hover #youtubeCercle{
+    
+    stroke: #ffffff;
+}
+.reseau:hover #youtubeIcon{
+    
+    fill: #ffffff;
+}
+
 .footerCenter{
     
     display: inline-block;
@@ -261,9 +295,7 @@ footer{
     .presentation {
         flex-direction: row;
     }
-    .imagepresentation{
-        
-    }
+
 }
 .company{
     background-color: black
@@ -302,10 +334,8 @@ footer{
 .menu a:hover{
     text-decoration: none;
     color: rgb(205, 185, 105);
-    cursor: pointer;
     
 }
-
 .menu li:first-child{
     border-right:0;
 }
