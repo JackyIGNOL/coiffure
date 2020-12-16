@@ -52,7 +52,7 @@ li{
     padding: 0px 15px;
 }
 a:-webkit-any-link{
-    font-family: OldBlack, Courier,  fantasy, monospace  ;  
+    font-family: Arial, Helvetica, sans-serif, Courier,  fantasy, monospace  ;  
     font-size: 1rem;
     text-decoration: none;
     color: white;
@@ -98,6 +98,7 @@ a:-webkit-any-link{
     font-size: 1.5rem;
 
 }
+
 .boutonreserver{
     background-color:   rgba(0, 0, 0, 0);
     border: 3px solid red;
@@ -115,13 +116,20 @@ a:-webkit-any-link{
 
 .rdv{
     background-color:   rgba(0, 0, 0, 0);
-    border: 2px solid rgb(205, 185, 105);
+    border: 3px solid rgb(205, 185, 105);
     color: rgb(205, 185, 105);
     font-size: 1rem;
     padding: 0.5rem;
-    
 
 }
+button:hover{
+    text-decoration: none;
+    border: 3px solid white;
+    color: white;
+    cursor: pointer;
+    
+}
+
 .blocService li{
     width:100%;
     margin-top: 1rem;
@@ -172,12 +180,12 @@ a:-webkit-any-link{
     
 }
 .align{
+    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-
 .text{
     text-align: center;
 }
@@ -202,7 +210,45 @@ a:-webkit-any-link{
 
 
 /* Footer */
+.reseau {
+  cursor: pointer;  
+    
+}
+.reseau:hover #facebookCercle{
+    
+    stroke: #ffffff;
+}    
+.reseau:hover #facebookIcon{
+    
+    fill: #ffffff;
+}
+.reseau:hover #instaCercle{
+    
+    stroke: #ffffff;
+}
+.reseau:hover #instaIcon1{
+    
+    fill: #ffffff;
+}
+.reseau:hover #instaIcon2{
+    
+    fill: #ffffff;
+}
+.reseau:hover #instaIcon3{
+    
+    fill: #ffffff;
+}
+.reseau:hover #youtubeCercle{
+    
+    stroke: #ffffff;
+}
+.reseau:hover #youtubeIcon{
+    
+    fill: #ffffff;
+}
+
 .footerCenter{
+    
     display: inline-block;
     vertical-align: top;
 	text-align: center;
@@ -257,9 +303,7 @@ footer{
     .presentation {
         flex-direction: row;
     }
-    .imagepresentation{
-        
-    }
+
 }
 .company{
     width: 100%;
@@ -301,10 +345,8 @@ footer{
 .menu a:hover{
     text-decoration: none;
     color: rgb(205, 185, 105);
-    cursor: pointer;
     
 }
-
 .menu li:first-child{
     border-right:0;
 }
