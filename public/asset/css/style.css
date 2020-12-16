@@ -105,6 +105,14 @@ a:-webkit-any-link{
     font-size: 1.5rem;
 
 }
+.boutondispo{
+    background-color:   rgba(0, 0, 0, 0);
+    border: 3px solid green;
+    color: green;
+    font-size: 1.5rem;
+
+}
+
 .rdv{
     background-color:   rgba(0, 0, 0, 0);
     border: 2px solid rgb(205, 185, 105);
