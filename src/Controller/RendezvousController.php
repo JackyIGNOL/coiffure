@@ -54,26 +54,30 @@ class RendezvousController extends AbstractController
             $modif = '+' . $i . ' day';
             $clone->modify($modif);
             foreach ($leshoraires as $heure) {
+                $heuredispo = false;
                 foreach ($lasemaine as $lejour) {
-                    $heuredispo = false;
                     $trucday =  date_format($clone, 'l');
                     if ($trucday == $lejour->getJour()) {
                         $lhoraire = $lejour->getHoraire();
-                        dd($leshoraires, $lasemaine, $lejour->getHoraire(), $lhoraire);
-
+                        /* dd($leshoraires, $lasemaine, $lejour->getHoraire(), $lhoraire); */
+                        if ($lhoraire == null) {
+                            $lhoraire = [];
+                        }
                         foreach ($lhoraire as $value) {
                             if ($value == $heure) {
                                 $heuredispo = true;
                             }
                         }
                     }
-                    if ($heuredispo) {
-                        $clone2 = clone $clone;
-                        $clone2->setTime($heure, 0, 0);
-                        $lesjh[$i][$heure] = $clone2;
-                    }
                     /* dd($lejour, $lasemaine, $heuredispo, $clone, $trucday, $lejour->getJour(), $lejour->getHoraire(), $heure);
                  */
+                }
+
+
+                if ($heuredispo) {
+                    $clone2 = clone $clone;
+                    $clone2->setTime($heure, 0, 0);
+                    $lesjh[$i][$heure] = $clone2;
                 }
             }
         }
@@ -81,7 +85,8 @@ class RendezvousController extends AbstractController
         return $this->render('rendezvous/index.html.twig', [
             'lesrendezvous' => $lesrendezvous,
             'lesjours' => $lesjours,
-            'lesjh' => $lesjh
+            'lesjh' => $lesjh,
+            'lasemaine' => $lasemaine
         ]);
     }
     // /**
