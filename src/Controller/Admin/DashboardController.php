@@ -24,11 +24,11 @@ class DashboardController extends AbstractDashboardController
         $lesusers = $repositoryuser->findAll();
         $lesrendezvous = $repositoryrdv->findAll();
 
-
         $leshoraires = [];
         for ($i = 8; $i <= 11; $i++) {
             array_push($leshoraires, $i);
         }
+
         $now   = new DateTime;
         for ($i = 1; $i < 8; $i++) {
             $clone = clone $now;
@@ -41,10 +41,7 @@ class DashboardController extends AbstractDashboardController
             }
         }
 
-
-
         //dd($lesusers,$lesrendezvous);
-
 
         // redirect to some CRUD controller
         /* $routeBuilder = $this->get(CrudUrlGenerator::class)->build(); */

@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Semaine{% endblock %}
+{% set trans_day_hash = { 
+    "Monday": "Lundi", 
+    "Tuesday": "Mardi", 
+    "Wednesday": "Mercredi", 
+    "Thursday": "Jeudi", 
+    "Friday": "Vendredi", 
+    "Saturday": "Samedi", 
+    "Sunday": "Dimanche" 
+} %}
+
+{% block body %}
+    {% if app.user %}
+	    {% if is_granted('ROLE_ADMIN') %}
+            <h1>Semaine</h1>
+            <form action="">
+            {% for jour in lasemaine %}
+               <br><p>{{trans_day_hash[jour.jour]}}  </p>
+               {# {{jour.horaire}} #}
+               <div class = "horizontal">
+                {% for heure in leshoraires %}
+                    <a href="{{path("ajoutheure",{'jour':jour.jour,'heure':heure})}} ">
+					    <button class="bouton heurea align">
+					    	<span class="textcenter">{{heure}} </span>
+					    </button>
+					</a>
+                {% endfor %}
+                </div>
+            {% endfor %}
+                <br><br>
+                <button type="submit" class="bouton">Enregistrer</button>
+            </form>
+            <br><br>
+        {% endif %}
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+    <script>
+        console.log("test js");
+        var champs = document.querySelectorAll("Monday");
+
+        console.log(champs);
+
+        for (let index = 0; index < champs.length; index++) {
+            console.log(champs[index]);
+        }
+        document.addEventListener("submit", function (e) {
+            e.preventDefault();
+            for (let index = 0; index < champs.length; index++) {
+                console.log(champs[index]);
+            }
+        })
+        
+
+    </script>
+    
+
+{% endblock %}
