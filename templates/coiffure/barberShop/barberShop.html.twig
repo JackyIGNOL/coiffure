@@ -5,6 +5,151 @@
 {% endblock %}
 
 {% block body %}
+<style>
+
+		.book_wrapper {
+			position: relative;
+		}
+
+		/* Booklet jQuery Plugin Style*/
+		.booklet {
+			-moz-box-shadow: 0 0 1px #fff;
+			-webkit-box-shadow: 0 0 1px #fff;
+			box-shadow: 0 0 1px #fff;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px;
+		}
+
+		.booklet .b-wrap-left {
+			/*background:#fff url("{{asset('asset/flipbook/images/left_bg.jpg')}}") no-repeat top left;*/
+			-webkit-border-top-left-radius: 10px;
+			-webkit-border-bottom-left-radius: 10px;
+			-moz-border-radius-topleft: 10px;
+			-moz-border-radius-bottomleft: 10px;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+		}
+
+		.booklet .b-wrap-right {
+			/*background:#efefef url("{{asset('asset/flipbook/images/right_bg.jpg')}}") no-repeat top left;*/
+
+			-webkit-border-top-right-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			-moz-border-radius-topright: 10px;
+			-moz-border-radius-bottomright: 10px;
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+
+		.booklet .b-counter {
+			bottom: 10px;
+			position: absolute;
+			display: block;
+			width: 90%;
+			height: 20px;
+			border-top: 1px solid #ddd;
+			color: #222;
+			text-align: center;
+			font-size: 12px;
+			padding: 5px 0 0;
+			background: transparent;
+			-moz-box-shadow: 0 -1px 1px #fff;
+			-webkit-box-shadow: 0 -1px 1px #fff;
+			box-shadow: 0 -1px 1px #fff;
+			opacity: 0.8;
+		}
+
+		.book_wrapper {
+			margin: 0 auto;
+			padding-top: 50px;
+			width: 905px;
+			height: 540px;
+			position: relative;
+			background: transparent url("{{asset('asset/flipbook/images/bg.png')}}") no-repeat 9px 27px;
+		}
+
+		.book_wrapper h1 {
+			margin: 5px 5px 5px 15px;
+			font-size: 26px;
+			padding-bottom: 7px;
+		}
+
+		.book_wrapper p {
+			color: #222;
+			font-size: 16px;
+			margin: 5px 5px 5px 15px;
+		}
+
+
+		.book_wrapper a.demo {
+			margin-left: 50px;
+		}
+
+
+		.book_wrapper img {
+			margin: 10px 0 5px 35px;
+			width: 300px;
+			padding: 4px;
+			border: 1px solid #ddd;
+			-moz-box-shadow: 1px 1px 1px #fff;
+			-webkit-box-shadow: 1px 1px 1px #fff;
+			box-shadow: 1px 1px 1px #fff;
+		}
+
+		.booklet .b-wrap-right img {
+			border: 1px solid #E6E3C2;
+		}
+
+		a#next_page_button,
+		a#prev_page_button {
+			display: none;
+			position: absolute;
+			width: 41px;
+			height: 40px;
+			cursor: pointer;
+			margin-top: -20px;
+			top: 50%;
+			background: transparent url("{{asset('asset/flipbook/images/buttons.png')}}") no-repeat 0 -40px;
+		}
+
+		a#prev_page_button {
+			left: -30px;
+		}
+
+		a#next_page_button {
+			right: -30px;
+			background-position: -41px -40px;
+		}
+
+		a#next_page_button:hover {
+			background-position: -41px 0;
+		}
+
+		a#prev_page_button:hover {
+			background-position: 0 0;
+		}
+
+		.loading {
+			width: 160px;
+			height: 56px;
+			position: absolute;
+			top: 50%;
+			margin-top: -28px;
+			right: 135px;
+			line-height: 56px;
+			color: #fff;
+			padding-left: 60px;
+			font-size: 15px;
+			background: #000 url("{{asset('asset/flipbook/images/ajax-loader.gif')}}") no-repeat 10px 50%;
+			opacity: 0.7;
+			z-index: 9999;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			border-radius: 20px;
+			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+		}
+	</style>
 
 
 	<h1 class="kage jauneC">- Book</h1>
@@ -74,5 +219,192 @@
 		</div>
 	</div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div class="apperitif">
+		<h1>La coiffure c'est aussi une passion donc je vous invites a consulter 
+		mon livre relatant mes aventures dans le monde de la coiffure</h1>
+	</div>
+	<div class="book_wrapper">
+		<a id="next_page_button"></a>
+		<a id="prev_page_button"></a>
+		<div id="loading" class="loading">Loading pages...</div>
+		<div id="mybook" style="display:none;">
+			<div class="b-load">
+				<div>
+					<img src="{{asset('asset/image/coupesize.jpg')}}" alt=""/>
+					<h1>Le Monde Des Coiffeurs</h1>
+					<p>Ce book représente ce qu'est un coiffeur,
+										de tous temps et dans tous les lieux mêmes insolites, on aura toujours besoin d'un coiffeur.
+										Il ne faut pas grand chose pour s'improviser coiffeur parfois mais cela reste une passion et qu'on soit
+										dans une cave ou encore dans son salon de coiffure, le sens artistique resteras le même.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/habib.jpg')}}" alt=""/>
+					<h1>Habib Coiffure</h1>
+					<p>Habib est un coiffeur égyptien que j'ai rencontré lors d'une formation de coiffure à Lille. Et il me disait qu'il n'avait pas besoin d'être
+										dans un salon pour exprimer son talent.Il a pris cette photos car c'est a cette endroit qu'il a toujours coupé les cheveux de son pere et a découvert sa passion.
+					</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/martinez.jpg')}}" alt=""/>
+					<h1>Martinez Coiffure</h1>
+					<p>
+						J'ai rencontré Dario sur un forum de coiffure et il m'a touché car lui n'a jamais travailler dans un salon de sa vie. Mais il a un talent fou,
+										ce gas s'est construis tous seul et il me disait qu'il s'est formé grace à des tutoriels Youtube. Aujourd'hui, il envisage de devenir le meilleur coiffeur à domicile de Cuba.
+					</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/afro homme.jpg')}}" alt=""/>
+					<h1>Marius Cut
+					</h1>
+					<p>
+						Marius est un ami américain, il a crée son propre salon cela n'a pas été facile car il n'a pas eu ces diplômes. Il a passé 5 ans a couper des cheveux
+										dans le garage de sa grand-mère. Il s'est fait connaitre comme étant le meilleur coiffeur de cheveux crepus de sa ville</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/tony.jpg')}}" alt=""/>
+					<h1>Tony style</h1>
+					<p>Tony est un ancien collègue de travail, il a toujours travailler à domicile. Sa particularité c'est qu'il a une telle dextérité qu'il
+										est capable de réaliser tous avec ces dix doigts. Il est coiffeur, barbier, tatoueur, designeur, c'est une vrai arstiste.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/hang.jpg')}}" alt=""/>
+					<h1>Hang Lee cut's</h1>
+					<p>Monsieur Hang Lee est le plus vieux coiffeur que j'ai connu, il est venu a une conférence et ce qui m'a étonner c'est qu'il n'a jamais utilisé une tondeuse de sa vie,
+										car ces seules outils sont ces divers peignes et la légendaire paire de ciseau (cette paire a plus de 30ans d'age).</p>
 
+				</div>
+				<div>
+					<img src="{{asset('asset/image/soi-fon.jpg')}}" alt=""/>
+					<h1>Soi Girl Style</h1>
+					<p>Soi-fon est une ancienne collaboratrice, elle a gagner la réputation de meilleur coiffeuse de sa région. Sa particularité est 
+										qu'elle n'a jamais toucher a des cheveux féminins, elle disait que les hommes lui permettait de mieux exprimer son talent artistique.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/street.jpg')}}" alt=""/>
+					<h1>Le Street Hair Art (S.H.A)</h1>
+					<p>Philippe, un londoniens pas comme les autres, il developpait son concept de (S.H.A) dans un metro
+										, et ce déplacait à la recherche de clients voulant se couper les cheveux dans les galeries.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/extracut.jpg')}}" alt=""/>
+					<h1>Les extras de Sylvestre</h1>
+					<p>Sylvestre est un punk dans l'âme, il est devenu le coiffeur ayant fait le plus de coiffures extravagante au monde.
+										Son talent est reconnu par tous et ce fut un réel plaisir de discuter avec lui.
+					</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/gecko.jpg')}}" alt=""/>
+					<h1>Le style gecko</h1>
+					<p>Ce jeune homme adorait les geckos et avait comme rêve de faire une chose montrant a quel point il aimait son animal de 
+										compagnie.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/elephant.jpg')}}" alt=""/>
+					<h1>Le style elephant</h1>
+					<p>Cette jeune femme voulait faire un hommage a son petit frere malade qui aimait les éléphant et a réaliser une coupe ressemblant le plus que possible a un éléphant.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/araigne.jpg')}}" alt=""/>
+					<h1>Le style Spidercut</h1>
+					<p>Voila un des plus grand fan de Spiderman que j'ai jamais vu, voulant se rapprocher le plus que possible de son heros préféré.
+										Cette coupe a été réaliser en 1h top chrono.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/ananas.jpg')}}" alt=""/>
+					<h1>Le style FruitCut</h1>
+					<p>Ici nous avons un style completement nouveau où les cheveux deviennent une vrai représentation artistique, ce jeune homme 
+										voulait quelque chose de nouveau.</p>
+				</div>
+				<div>
+					<img src="{{asset('asset/image/ladygaga.jpg')}}" alt=""/>
+					<h1>Le style gagaCut</h1>
+					<p>Ici nous avons la représentation de ce qu'est le style extravagant, lady gaga a été la premiere star a
+										se montré avec ce style.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		$(function () {
+var $mybook = $('#mybook');
+var $bttn_next = $('#next_page_button');
+var $bttn_prev = $('#prev_page_button');
+var $loading = $('#loading');
+var $mybook_images = $mybook.find('img');
+var cnt_images = $mybook_images.length;
+var loaded = 0;
+// preload all the images in the book,
+// and then call the booklet plugin
+
+$mybook_images.each(function () {
+
+var $img = $(this);
+var source = $img.attr('src');
+$('<img/>').load(function () {
+++ loaded;
+if (loaded == cnt_images) {
+$loading.hide();
+$bttn_next.show();
+$bttn_prev.show();
+$mybook.show().booklet({
+name: null, // name of the booklet to display in the document title bar
+width: 800, // container width
+height: 500, // container height
+speed: 600, // speed of the transition between pages
+direction: 'LTR', // direction of the overall content organization, default LTR, left to right, can be RTL for languages which read right to left
+startingPage: 0, // index of the first page to be displayed
+easing: 'easeInOutQuad', // easing method for complete transition
+easeIn: 'easeInQuad', // easing method for first half of transition
+easeOut: 'easeOutQuad', // easing method for second half of transition
+
+closed: true, // start with the book "closed", will add empty pages to beginning and end of book
+closedFrontTitle: null, // used with "closed", "menu" and "pageSelector", determines title of blank starting page
+closedFrontChapter: null, // used with "closed", "menu" and "chapterSelector", determines chapter name of blank starting page
+closedBackTitle: null, // used with "closed", "menu" and "pageSelector", determines chapter name of blank ending page
+closedBackChapter: null, // used with "closed", "menu" and "chapterSelector", determines chapter name of blank ending page
+covers: false, // used with  "closed", makes first and last pages into covers, without page numbers (if enabled)
+
+pagePadding: 10, // padding for each page wrapper
+pageNumbers: true, // display page numbers on each page
+
+hovers: false, // enables preview pageturn hover animation, shows a small preview of previous or next page on hover
+overlays: false, // enables navigation using a page sized overlay, when enabled links inside the content will not be clickable
+tabs: false, // adds tabs along the top of the pages
+tabWidth: 60, // set the width of the tabs
+tabHeight: 20, // set the height of the tabs
+arrows: false, // adds arrows overlayed over the book edges
+cursor: 'pointer', // cursor css setting for side bar areas
+
+hash: false, // enables navigation using a hash string, ex: #/page/1 for page 1, will affect all booklets with 'hash' enabled
+keyboard: true, // enables navigation with arrow keys (left: previous, right: next)
+next: $bttn_next, // selector for element to use as click trigger for next page
+prev: $bttn_prev, // selector for element to use as click trigger for previous page
+
+menu: null, // selector for element to use as the menu area, required for 'pageSelector'
+pageSelector: false, // enables navigation with a dropdown menu of pages, requires 'menu'
+chapterSelector: false, // enables navigation with a dropdown menu of chapters, determined by the "rel" attribute, requires 'menu'
+
+shadows: true, // display shadows on page animations
+shadowTopFwdWidth: 166, // shadow width for top forward anim
+shadowTopBackWidth: 166, // shadow width for top back anim
+shadowBtmWidth: 50, // shadow width for bottom shadow
+
+before: function () {}, // callback invoked before each page turn animation
+after: function () {} // callback invoked after each page turn animation
+});
+Cufon.refresh();
+}
+}).attr('src', source);
+});
+
+});
+	</script>
 {% endblock %}
