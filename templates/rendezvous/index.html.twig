@@ -30,46 +30,61 @@
 				<button class="bouton">Deconnectez-vous</button>
 			</a>
 		</div>
-		<h2>Vos rendez vous :</h2>
-		<h3>Vos rendez-vous futur :</h3>
+		{% set rendezvousexiste = false %}
+		{% set rendezvousexistep = false %}
 		{% for rendezvous in lesrendezvous %}
 			{% if rendezvous.getUser == app.user %}
 				{% if rendezvous.heureAt|date("YmdHis") > "now"|date("YmdHis") %}
-					<p>
-						<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
-							<button class="bouton">
-								<span>
-									Supprimer ce rendez-vous >
-								</span>
-							</button>
-						</a>
-						Le
-						{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
-						{{rendezvous.heureAt|date("d/m/Y")}}
-						à
-						{{rendezvous.heureAt|date("h")}}
-						heures.
-						{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
-					</p>
+					{% set rendezvousexiste = true %}
 				{% endif %}
-			{% endif %}
-		{% endfor %}
-		<h3>Vos rendez-vous passé :</h3>
-		{% for rendezvous in lesrendezvous %}
-			{% if rendezvous.getUser == app.user %}
 				{% if rendezvous.heureAt|date("YmdHis") <= "now"|date("YmdHis") %}
-					<p>
-						Le
-						{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
-						{{rendezvous.heureAt|date("d/m/Y")}}
-						à
-						{{rendezvous.heureAt|date("h")}}
-						heures.
-						{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
-					</p>
+					{% set rendezvousexistep = true %}
 				{% endif %}
 			{% endif %}
 		{% endfor %}
+		{% if rendezvousexiste == true  %}
+			<h3>Vos rendez-vous futur :</h3>
+			{% for rendezvous in lesrendezvous %}
+				{% if rendezvous.getUser == app.user %}
+					{% if rendezvous.heureAt|date("YmdHis") > "now"|date("YmdHis") %}
+						<p>
+							<a href="{{path("removeRendezVous",{'id':rendezvous.id})}} ">
+								<button class="bouton">
+									<span>
+										Supprimer ce rendez-vous >
+									</span>
+								</button>
+							</a>
+							Le
+							{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
+							{{rendezvous.heureAt|date("d/m/Y")}}
+							à
+							{{rendezvous.heureAt|date("h")}}
+							heures.
+							{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+						</p>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+		{% if rendezvousexistep == true  %}
+			<h3>Vos rendez-vous passé :</h3>
+			{% for rendezvous in lesrendezvous %}
+				{% if rendezvous.getUser == app.user %}
+					{% if rendezvous.heureAt|date("YmdHis") <= "now"|date("YmdHis") %}
+						<p>
+							Le
+							{{ trans_day_hash[rendezvous.heureAt|date('l')] }}
+							{{rendezvous.heureAt|date("d/m/Y")}}
+							à
+							{{rendezvous.heureAt|date("h")}}
+							heures.
+							{# {{ rendezvous.heureAt.trans_day_hash["now"|date('l')] }} #}
+						</p>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
 		<h2>
 			Rendez-vous Disponibles :
 		</h2>

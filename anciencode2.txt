@@ -72,3 +72,15 @@ Privacy Overview
 This website uses cookies to improve your experience while you navigate through the website. Out of these cookies, the cookies that are categorized as necessary are stored on your browser as they are as essential for the working of basic functionalit...
 Nécessaire
 Toujours activé
+
+<span class = "vertical heurea">
+                        {{heure}} 
+                        <input type="checkbox" name="{{jour.jour}}" value="{{heure}}">
+                    </span>
+
+
+
+	{# <a href="{{ path('booking_new') }}">Ajouter un nouveau rendez-vous</a> #}
+	{#<div id="calendar-holder"></div> #}
+
+

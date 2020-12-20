@@ -10,11 +10,14 @@
     flex-direction: row;
 }
 .heurea{
-    width: 3rem;
+    width: 2.8rem;
     display: flex;
     align-items: center;
 }
 .textcenter{
     text-align: center;
 }
-
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
